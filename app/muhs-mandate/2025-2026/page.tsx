@@ -106,40 +106,6 @@ export default function MUHSMandate20252026() {
           </p>
         </div>
 
-        {/* Information Card */}
-        <div className="bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-xl p-2 mb-5 border border-[#F39C12]/20">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-lg">ℹ️</span> About MUHS Mandate
-              </h3>
-              <p className="text-gray-700 text-sm">
-                The Maharashtra University of Health Sciences (MUHS) mandate outlines the academic regulations, 
-                curriculum, and guidelines for health science institutions for the academic year 2025-2026.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-1">
-                <span className="text-lg">📅</span> Academic Year
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Year:</span>
-                  <span className="font-medium text-[#0bc22d]">2025-2026</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Issued By:</span>
-                  <span className="font-medium">MUHS Nashik</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Effective From:</span>
-                  <span className="font-medium">June 1, 2025</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Table Section */}
         <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
           {/* Table Header */}
@@ -303,65 +269,6 @@ export default function MUHSMandate20252026() {
                     </div>
                   );
                 })}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Important Notes */}
-        <div className="mt-8 grid md:grid-cols-2 gap-6">
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                <span className="text-blue-600">📌</span>
-              </div>
-              <h3 className="font-bold text-gray-800">Important Notes</h3>
-            </div>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 mt-0.5">✓</span>
-                <span>All documents are in PDF format</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 mt-0.5">✓</span>
-                <span>Download and save for future reference</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 mt-0.5">✓</span>
-                <span>Contact administration for any clarifications</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                <span className="text-green-600">ℹ️</span>
-              </div>
-              <h3 className="font-bold text-gray-800">Contact Information</h3>
-            </div>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#0bc22d]/10 flex items-center justify-center">
-                  <span className="text-[#0bc22d]">📧</span>
-                </div>
-                <div>
-                  <p className="text-gray-600">Email</p>
-                  <a href="mailto:muhs@brharnephysio.edu.in" className="font-medium text-gray-800 hover:text-[#0bc22d]">
-                    muhs@brharnephysio.edu.in
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#F39C12]/10 flex items-center justify-center">
-                  <span className="text-[#F39C12]">📞</span>
-                </div>
-                <div>
-                  <p className="text-gray-600">Phone</p>
-                  <a href="tel:+912225123456" className="font-medium text-gray-800 hover:text-[#F39C12]">
-                    +91 22 2512 3456
-                  </a>
-                </div>
               </div>
             </div>
           </div>

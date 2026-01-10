@@ -184,48 +184,6 @@ export default function SyllabusPage() {
             </div>
           ))}
         </div>
-
-        {/* Important Information */}
-        <div className="bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-2xl p-8 border border-[#F39C12]/20">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#066918] to-[#d99d3c] flex items-center justify-center text-white">
-              <FiFileText className="text-xl" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Important Information</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 rounded-full bg-[#0bc22d]"></div>
-                    <span>All syllabi are in PDF format</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 rounded-full bg-[#0bc22d]"></div>
-                    <span>Updated according to latest curriculum</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 rounded-full bg-[#0bc22d]"></div>
-                    <span>For best viewing, use Adobe Acrobat Reader</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 rounded-full bg-[#F39C12]"></div>
-                    <span>Contact department for any queries</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 rounded-full bg-[#F39C12]"></div>
-                    <span>Official MUHS approved curriculum</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <div className="w-2 h-2 rounded-full bg-[#F39C12]"></div>
-                    <span>Check regularly for updates</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   );

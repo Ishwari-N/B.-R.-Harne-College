@@ -25,7 +25,7 @@ export default function RankersPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-6">
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-4 mb-4">
@@ -41,9 +41,6 @@ export default function RankersPage() {
               </p>
             </div>
           </div>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Recognizing outstanding academic performance and achievements of our students
-          </p>
         </div>
      {/* Rankers Table */}
         <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden mb-8">
@@ -208,49 +205,6 @@ export default function RankersPage() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Information Card */}
-        <div className="bg-gradient-to-r from-green-50 to-orange-50 rounded-xl p-6 border border-green-200">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-100 to-orange-100 flex items-center justify-center">
-              <span className="text-xl">💡</span>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-800">About MUHS Exam Rankings</h3>
-              <p className="text-sm text-gray-600">Maharashtra University of Health Sciences</p>
-            </div>
-          </div>
-          <p className="text-gray-700 mb-3">
-            These rankings represent the outstanding academic achievements of our students in the 
-            Maharashtra University of Health Sciences (MUHS) examinations. The college takes pride 
-            in consistently producing top rankers across various health science disciplines.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500"></div>
-              <span className="text-sm text-gray-700">Based on official MUHS results</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-              <span className="text-sm text-gray-700">Updated after each examination session</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500"></div>
-              <span className="text-sm text-gray-700">Recognizes academic excellence</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-              <span className="text-sm text-gray-700">Inspires future students</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer Note */}
-        <div className="mt-8 text-center text-gray-600 text-sm">
-          <p>
-            For any queries regarding MUHS exam results or rankings, please contact the Examination Department.
-          </p>
         </div>
       </div>
     </main>
