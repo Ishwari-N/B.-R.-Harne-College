@@ -6,55 +6,59 @@ import { AiOutlineFilePdf } from 'react-icons/ai';
 
 export default function SyllabusPage() {
   const [syllabusList] = useState([
-    {
-      id: 1,
-      title: "1st B.P.Th.",
-      subtitle: "First Year Bachelor of Physiotherapy",
-      viewLink: "https://brharnephysiotherapy.com/assets/document/1st%20bpt.pdf",
-      downloadLink: "https://brharnephysiotherapy.com/assets/document/1st%20bpt.pdf",
-      description: "Foundation subjects including Anatomy, Physiology, and basic physiotherapy concepts",
-      color: "from-[#0bc22d] to-emerald-500",
-      bgColor: "bg-gradient-to-br from-[#0bc22d]/30 to-emerald-50",
-      borderColor: "border-[#0bc22d]/20",
-      icon: "📚"
-    },
-    {
-      id: 2,
-      title: "2nd B.P.Th.",
-      subtitle: "Second Year Bachelor of Physiotherapy",
-      viewLink: "https://brharnephysiotherapy.com/assets/document/2nd%20bpth.pdf",
-      downloadLink: "https://brharnephysiotherapy.com/assets/document/2nd%20bpth.pdf",
-      description: "Advanced subjects including Pathology, Pharmacology, and exercise therapy",
-      color: "from-[#0bc22d] to-[#F39C12]",
-      bgColor: "bg-gradient-to-br from-[#0bc22d]/10 to-[#F39C12]/10",
-      borderColor: "border-[#0bc22d]/20",
-      icon: "📖"
-    },
-    {
-      id: 3,
-      title: "3rd B.P.Th.",
-      subtitle: "Third Year Bachelor of Physiotherapy",
-      viewLink: "https://brharnephysiotherapy.com/assets/document/3rd%20bpt.pdf",
-      downloadLink: "https://brharnephysiotherapy.com/assets/document/3rd%20bpt.pdf",
-      description: "Clinical subjects including orthopedics, neurology, and cardiopulmonary physiotherapy",
-      color: "from-[#F39C12] to-orange-500",
-      bgColor: "bg-gradient-to-br from-[#F39C12]/10 to-orange-50",
-      borderColor: "border-[#F39C12]/20",
-      icon: "🏥"
-    },
-    {
-      id: 4,
-      title: "4th B.P.Th.",
-      subtitle: "Fourth Year Bachelor of Physiotherapy",
-      viewLink: "https://brharnephysiotherapy.com/assets/document/4th%20bpt.pdf",
-      downloadLink: "https://brharnephysiotherapy.com/assets/document/4th%20bpt.pdf",
-      description: "Internship and specialization including research methodology and clinical practice",
-      color: "from-[#0bc22d] to-amber-500",
-      bgColor: "bg-gradient-to-br from-[#0bc22d]/10 to-amber-50",
-      borderColor: "border-[#0bc22d]/20",
-      icon: "🎓"
-    }
-  ]);
+  {
+    id: 1,
+    title: "1st B.P.Th.",
+    subtitle: "First Year Bachelor of Physiotherapy",
+    viewLink: "https://brharnephysiotherapy.com/assets/document/1st%20bpt.pdf",
+    downloadLink: "https://brharnephysiotherapy.com/assets/document/1st%20bpt.pdf",
+    description: "Foundation subjects including Anatomy, Physiology, and basic physiotherapy concepts",
+    color: "from-[#0bc22d] to-emerald-500",
+    bgColor: "bg-gradient-to-br from-[#0bc22d]/30 to-emerald-50",
+    borderColor: "border-[#0bc22d]/20",
+    icon: "🎓",
+    iconBg: "inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 text-gray-800 rounded-lg hover:from-[#0bc22d]/20 hover:to-[#F39C12]/20 hover:shadow-md transition-all duration-200 font-medium group/link border border-[#0bc22d]/20"
+  },
+  {
+    id: 2,
+    title: "2nd B.P.Th.",
+    subtitle: "Second Year Bachelor of Physiotherapy",
+    viewLink: "https://brharnephysiotherapy.com/assets/document/2nd%20bpth.pdf",
+    downloadLink: "https://brharnephysiotherapy.com/assets/document/2nd%20bpth.pdf",
+    description: "Advanced subjects including Pathology, Pharmacology, and exercise therapy",
+    color: "from-[#0bc22d] to-[#F39C12]",
+    bgColor: "bg-gradient-to-br from-[#0bc22d]/10 to-[#F39C12]/10",
+    borderColor: "border-[#0bc22d]/20",
+    icon: "🎓",
+    iconBg: "inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 text-gray-800 rounded-lg hover:from-[#0bc22d]/20 hover:to-[#F39C12]/20 hover:shadow-md transition-all duration-200 font-medium group/link border border-[#0bc22d]/20"
+  },
+  {
+    id: 3,
+    title: "3rd B.P.Th.",
+    subtitle: "Third Year Bachelor of Physiotherapy",
+    viewLink: "https://brharnephysiotherapy.com/assets/document/3rd%20bpt.pdf",
+    downloadLink: "https://brharnephysiotherapy.com/assets/document/3rd%20bpt.pdf",
+    description: "Clinical subjects including orthopedics, neurology, and cardiopulmonary physiotherapy",
+    color: "from-[#F39C12] to-orange-500",
+    bgColor: "bg-gradient-to-br from-[#F39C12]/10 to-orange-50",
+    borderColor: "border-[#F39C12]/20",
+    icon: "🎓",
+    iconBg: "inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 text-gray-800 rounded-lg hover:from-[#0bc22d]/20 hover:to-[#F39C12]/20 hover:shadow-md transition-all duration-200 font-medium group/link border border-[#0bc22d]/20"
+  },
+  {
+    id: 4,
+    title: "4th B.P.Th.",
+    subtitle: "Fourth Year Bachelor of Physiotherapy",
+    viewLink: "https://brharnephysiotherapy.com/assets/document/4th%20bpt.pdf",
+    downloadLink: "https://brharnephysiotherapy.com/assets/document/4th%20bpt.pdf",
+    description: "Internship and specialization including research methodology and clinical practice",
+    color: "from-[#0bc22d] to-amber-500",
+    bgColor: "bg-gradient-to-br from-[#0bc22d]/10 to-amber-50",
+    borderColor: "border-[#0bc22d]/20",
+    icon: "🎓",
+    iconBg: "inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 text-gray-800 rounded-lg hover:from-[#0bc22d]/20 hover:to-[#F39C12]/20 hover:shadow-md transition-all duration-200 font-medium group/link border border-[#0bc22d]/20"
+  }
+]);
 
   const handleDownload = (link: string, title: string) => {
     const anchor = document.createElement('a');
@@ -99,7 +103,7 @@ export default function SyllabusPage() {
                 >
                   <td className="py-6 px-8">
                     <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${syllabus.color} flex items-center justify-center text-white text-xl`}>
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white text-xl ${syllabus.iconBg} border border-[#0bc22d]/20 hover:border-[#0bc22d]/30`}>
                         {syllabus.icon}
                       </div>
                       <div>
@@ -146,7 +150,7 @@ export default function SyllabusPage() {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${syllabus.color} flex items-center justify-center text-white text-xl`}>
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-gray-800 text-xl ${syllabus.iconBg} border border-[#0bc22d]/20 hover:border-[#0bc22d]/30`}>
                       {syllabus.icon}
                     </div>
                     <div>

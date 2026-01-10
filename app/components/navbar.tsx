@@ -16,7 +16,7 @@ export default function Navbar() {
       { name: 'About College', path: '/about/college' },
     ],
     course: [
-      { name: 'Under Graduate Courses', path: '/course/under-graduate' },
+      { name: 'Under Graduate Courses', path: ' ' },
       { name: 'Documents List', path: '/course/documents-list' },
     ],
     faculty: [
@@ -30,12 +30,12 @@ export default function Navbar() {
       { name: 'Local Managing Committee', path: '/committee/local-managing' },
     ],
     admissions: [
-      { name: 'Fee Details', path: '/admissions/fees' },
-      { name: 'Admission Details', path: '/admissions/admission-details' },
-      { name: 'Committee Notice', path: '/admissions/committee' },
-      { name: 'Vacancy Notice', path: '/admissions/vacancy' },
-      { name: 'Application for SQ', path: '/admissions/SQ' },
-      { name: 'Application for IQ', path: '/admissions/IQ' },
+      { name: 'Fee Details', path: 'https://brharnephysiotherapy.com/assets/document/B%20R%20Harne%20College%20of%20Physiotherapy%20Fee%20Structure%202025-26....pdf', external: true },
+      { name: 'Admission Details', path: 'https://brharnephysiotherapy.com/assets/document/Admission%20Procedure%20for%20BPT.pdf', external: true },
+      { name: 'Committee Notice', path: 'https://brharnephysiotherapy.com/assets/document/Scrutiny%20Committee%20Notice.pdf', external: true },
+      { name: 'Vacancy Notice', path: 'https://brharnephysiotherapy.com/assets/document/Vacancy%20Notice.pdf', external: true },
+      { name: 'Application for SQ', path: 'https://brharnephysiotherapy.com/assets/document/Application%20for%20SQ.pdf', external: true },
+      { name: 'Application for IQ', path: 'https://brharnephysiotherapy.com/assets/document/Application%20for%20IQ.pdf', external: true },
     ],
     department: [
       { name: 'Fund. of Electrotherapy', path: '/department/electrotherapy' },
@@ -54,6 +54,19 @@ export default function Navbar() {
 
   const toggleDropdown = (key: string) => {
     setOpenDropdown(openDropdown === key ? null : key);
+  };
+
+  const handleLinkClick = (path: string, isExternal: boolean, event?: React.MouseEvent) => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+    if (isExternal) {
+      // For external links, open in new tab
+      window.open(path, '_blank');
+      if (event) {
+        event.preventDefault();
+      }
+    }
   };
 
   return (
@@ -145,70 +158,87 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Navbar */}
-    <div className="hidden md:block w-full bg-gradient-to-r from-[#0bc22d] to-[#F39C12]">
-  <div className="px-2 py-1.5 text-sm max-w-7xl mx-auto">
-    <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
-      <Link
-        href="/"
-        className="font-bold text-white hover:text-black transition-colors text-sm px-2 py-1"
-      >
-        Home
-      </Link>
+      <div className="hidden md:block w-full bg-gradient-to-r from-[#0bc22d] to-[#F39C12]">
+        <div className="px-2 py-1.5 text-sm max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
+            <Link
+              href="/"
+              className="font-bold text-white hover:text-black transition-colors text-sm px-2 py-1"
+            >
+              Home
+            </Link>
 
-      {Object.entries(dropdownItems).map(([key, items]) => (
-        <div
-          key={key}
-          className="relative group"
-        >
-          <button
-            className="font-semibold text-white hover:text-black transition-colors text-sm px-2 py-1 flex items-center gap-1 focus:outline-none"
-          >
-            {key.split('-').map(word => 
-              word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            ).join(' ')} 
-            <span className="text-[6px] transition-transform duration-200 group-hover:rotate-180">▼</span>
-          </button>
-          
-          {/* DROPDOWN BOX - Hidden by default, shown on hover */}
-          <div className="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-xl border-t-4 border-[#F39C12] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-            <div className="flex flex-col py-2">
-              {items.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className="px-3 py-1.5 text-xs font-medium text-gray-800 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-yellow-100 hover:text-[#0F2A44] transition-all duration-150"
-                  onClick={() => setOpenDropdown(null)}
+            {Object.entries(dropdownItems).map(([key, items]) => (
+              <div
+                key={key}
+                className="relative group"
+              >
+                <button
+                  className="font-semibold text-white hover:text-black transition-colors text-sm px-2 py-1 flex items-center gap-1 focus:outline-none"
                 >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+                  {key.split('-').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                  ).join(' ')} 
+                  <span className="text-[6px] transition-transform duration-200 group-hover:rotate-180">▼</span>
+                </button>
+                
+                {/* DROPDOWN BOX - Hidden by default, shown on hover */}
+                <div className="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-xl border-t-4 border-[#F39C12] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="flex flex-col py-2">
+                    {items.map((item: any) => (
+                      item.external ? (
+                        <a
+                          key={item.path}
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-3 py-1.5 text-xs font-medium text-gray-800 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-yellow-100 hover:text-[#0F2A44] transition-all duration-150 flex items-center justify-between"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {item.name}
+                          <span className="text-[10px]">↗</span>
+                        </a>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          href={item.path}
+                          className="px-3 py-1.5 text-xs font-medium text-gray-800 hover:bg-gradient-to-r hover:from-yellow-100 hover:to-yellow-100 hover:text-[#0F2A44] transition-all duration-150"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {item.name}
+                        </Link>
+                      )
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {regularItems.map((item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                className="font-bold text-white hover:text-black transition-colors text-sm px-2 py-1"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
-      ))}
+      </div>
 
-      {regularItems.map((item) => (
-        <Link
-          key={item}
-          href={`/${item.toLowerCase()}`}
-          className="font-bold text-white hover:text-black transition-colors text-sm px-2 py-1"
-        >
-          {item}
-        </Link>
-      ))}
-    </div>
-  </div>
-</div>
-
-      {/* Mobile Navbar - Full Screen Overlay (LIKE IMAGE) */}
+      {/* Mobile Navbar - Full Screen Overlay (Full White Background) */}
       {isMobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-white overflow-y-auto">
-          {/* Mobile Nav Header */}
+          {/* Mobile Nav Header with Logo and Close Button */}
           <div className="sticky top-0 bg-gradient-to-r from-[#0bc22d] to-[#F39C12] p-3 flex items-center justify-between">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-3">
-                <span className="text-white text-lg">🏛️</span>
-              </div>
+              {/* Web Logo in header */}
+              <img
+                src="/weblogo.png"
+                alt="College Logo"
+                className="w-10 h-10 object-contain mr-3 bg-white rounded-full p-1"
+              />
               <div>
                 <h2 className="text-white font-bold text-base">B. R. Harne College</h2>
                 <p className="text-white/80 text-xs">of Physiotherapy</p>
@@ -224,26 +254,26 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Nav Content - LIKE IMAGE WITH ICONS AND VERTICAL LINE */}
-          <div className="p-4">
+          {/* Mobile Nav Content - Full White Background, No Cards */}
+          <div className="p-4 bg-white">
             {/* Home Link with Icon */}
-            <div className="mb-4">
+            <div className="mb-3">
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center py-3 px-4 bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-lg font-bold text-gray-800 text-sm border-l-4 border-[#0bc22d]"
+                className="flex items-center py-3 px-3 font-bold text-gray-800 text-sm hover:bg-gray-50 rounded-lg transition-colors"
               >
                 <span className="mr-3 text-lg">🏠</span>
-                Home
+                <span>Home</span>
               </Link>
             </div>
 
-            {/* Dropdown Items with Icons and Vertical Line */}
+            {/* Dropdown Items with Icons - No Cards, Just List */}
             {Object.entries(dropdownItems).map(([key, items]) => (
-              <div key={key} className="mb-3">
+              <div key={key} className="mb-2">
                 <button
                   onClick={() => toggleDropdown(key)}
-                  className="w-full flex items-center justify-between py-3 px-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg font-semibold text-gray-800 text-sm border-l-4 border-[#F39C12]"
+                  className="w-full flex items-center justify-between py-3 px-3 font-semibold text-gray-800 text-sm hover:bg-gray-50 rounded-lg transition-colors"
                 >
                   <div className="flex items-center">
                     <span className="mr-3 text-lg">
@@ -267,40 +297,57 @@ export default function Navbar() {
                 </button>
                 
                 {openDropdown === key && (
-                  <div className="mt-2 ml-10 space-y-1 border-l-2 border-[#F39C12] pl-4">
-                    {items.map((item) => (
-                      <Link
-                        key={item.path}
-                        href={item.path}
-                        onClick={() => {
-                          setIsMobileMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                        className="block py-2 px-3 text-sm text-gray-700 hover:bg-yellow-50 rounded-lg hover:translate-x-1 transition-transform"
-                      >
-                        {item.name}
-                      </Link>
+                  <div className="mt-1 ml-10 space-y-1">
+                    {items.map((item: any) => (
+                      item.external ? (
+                        <a
+                          key={item.path}
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
+                          className="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors flex items-center justify-between"
+                        >
+                          {item.name}
+                          <span className="text-[10px]">↗</span>
+                        </a>
+                      ) : (
+                        <Link
+                          key={item.path}
+                          href={item.path}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
+                          className="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      )
                     ))}
                   </div>
                 )}
               </div>
             ))}
 
-            {/* Regular Items with Icons */}
+            {/* Regular Items with Icons - No Cards */}
             <div className="space-y-2">
               {regularItems.map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center py-3 px-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg font-bold text-gray-800 text-sm border-l-4 border-[#B74C70]"
+                  className="flex items-center py-3 px-3 font-bold text-gray-800 text-sm hover:bg-gray-50 rounded-lg transition-colors"
                 >
                   <span className="mr-3 text-lg">
                     {item === 'Syllabus' ? '📖' : 
                      item === 'Events' ? '📅' : 
                      '📞'}
                   </span>
-                  {item}
+                  <span>{item}</span>
                 </Link>
               ))}
             </div>
