@@ -1,175 +1,67 @@
-'use client'
-import { useState } from 'react'
-import Navbar from './navbar'
+'use client';
 
-interface Event {
-  type: string
-  title: string
-  subtitle: string
-  featured?: boolean
-  description: string
-  date: string
-  time: string
-  location: string
-  venue: string
-  tags: string[]
+import React from 'react';
+import Link from 'next/link';
+import { Event } from '../data/events-data';
+
+interface EventCardProps {
+  event: Event;
 }
 
-const EventCard = ({ event }: { event: Event }) => {
-  const [isHovered, setIsHovered] = useState(false)
-
-  const getEventColor = () => {
-    switch (event.type) {
-      case 'camp': return '#2b6cb0'
-      case 'global': return '#38a169'
-      case 'clinical': return '#805ad5'
-      case 'yoga': return '#319795'
-      case 'hospital': return '#e53e3e'
-      default: return '#2c5282'
-    }
-  }
-
-  const getEventIcon = () => {
-    switch (event.type) {
-      case 'camp': return '🏕️'
-      case 'global': return '🌍'
-      case 'clinical': return '🏥'
-      case 'yoga': return '🧘'
-      case 'hospital': return '🚑'
-      default: return '📅'
-    }
-  }
-
+export default function EventCard({ event }: EventCardProps) {
   return (
-    <div 
-      className="event-card"
-      style={{
-        background: 'white',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        boxShadow: isHovered 
-          ? '0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08)' 
-          : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        border: '1px solid #e2e8f0',
-        transition: 'all 0.3s ease',
-        transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
-        height: '100%',
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Event Header */}
-      <div 
-        className="event-header"
-        style={{
-          background: `linear-gradient(135deg, ${getEventColor()}, ${event.type === 'camp' ? '#1a365d' : getEventColor() + 'cc'})`,
-          color: 'white',
-          padding: '1.5rem',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <div style={{
-              fontSize: '2.5rem',
-              marginRight: '1rem',
-              background: 'rgba(255, 255, 255, 0.2)',
-              padding: '0.75rem',
-              borderRadius: '8px',
-            }}>
-              {getEventIcon()}
-            </div>
-            <div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: '700', margin: 0 }}>
-                {event.title}
-              </h3>
-              <p style={{ opacity: 0.9, fontSize: '0.875rem', marginTop: '0.25rem' }}>
-                {event.subtitle}
-              </p>
-            </div>
-          </div>
-          {event.featured && (
-            <span style={{
-              backgroundColor: '#fbbf24',
-              color: '#92400e',
-              fontSize: '0.75rem',
-              fontWeight: 'bold',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '9999px',
-            }}>
-              FEATURED
-            </span>
-          )}
-        </div>
+    <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white border border-gray-100">
+      {/* Event Image */}
+      <div className="relative h-48 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent z-10"></div>
+        <img
+          src={event.image}
+          alt={event.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          onError={(e) => {
+            e.currentTarget.src = '/event-fallback.jpg';
+            e.currentTarget.className = 'w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 bg-gray-200';
+          }}
+        />
       </div>
 
       {/* Event Content */}
-      <div style={{ padding: '1.5rem' }}>
-        <p style={{ color: '#4a5568', marginBottom: '1rem' }}>
+      <div className="p-6">
+        <div className="flex items-start justify-between mb-4">
+          <h3 className="text-xl font-bold text-gray-800 group-hover:text-[#0bc22d] transition-colors duration-300">
+            {event.title}
+          </h3>
+        </div>
+
+        {/* Location */}
+        <div className="mb-4">
+          <div className="flex items-center gap-2 text-gray-600 mb-3">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+            </svg>
+            <span className="text-sm font-medium">{event.location}</span>
+          </div>
+        </div>
+
+        <p className="text-gray-600 mb-6 line-clamp-3">
           {event.description}
         </p>
-        
-        {/* Details */}
-        <div style={{ marginBottom: '1.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.75rem' }}>
-            <span style={{ marginRight: '0.75rem', fontSize: '1.25rem' }}>📅</span>
-            <div>
-              <div style={{ fontWeight: '500', color: '#2d3748' }}>{event.date}</div>
-              <div style={{ fontSize: '0.875rem', color: '#718096' }}>{event.time}</div>
-            </div>
-          </div>
-          
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <span style={{ marginRight: '0.75rem', fontSize: '1.25rem' }}>📍</span>
-            <div>
-              <div style={{ fontWeight: '500', color: '#2d3748' }}>{event.location}</div>
-              <div style={{ fontSize: '0.875rem', color: '#718096' }}>{event.venue}</div>
-            </div>
-          </div>
-        </div>
 
-        {/* Tags */}
-        <div style={{ 
-          display: 'flex', 
-          flexWrap: 'wrap', 
-          gap: '0.5rem',
-          marginBottom: '1.5rem',
-        }}>
-          {event.tags.map((tag, index) => (
-            <span
-              key={index}
-              style={{
-                backgroundColor: '#ebf8ff',
-                color: '#2c5282',
-                padding: '0.375rem 0.75rem',
-                borderRadius: '9999px',
-                fontSize: '0.875rem',
-                fontWeight: '500',
-              }}
-            >
-              {tag}
-            </span>
-          ))}
+        <div className="flex items-center justify-between">
+          <span className="text-gray-700 text-xs font-bold whitespace-nowrap">
+            {event.date}
+          </span>
+          <Link 
+            href={`/events/${event.slug}`}
+            className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 flex items-center gap-2"
+          >
+            View Details
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
         </div>
-
-        {/* Action Button */}
-        <button
-          style={{
-            width: '100%',
-            padding: '0.75rem',
-            borderRadius: '0.5rem',
-            fontWeight: '600',
-            border: 'none',
-            cursor: 'pointer',
-            transition: 'all 0.2s',
-            backgroundColor: isHovered ? getEventColor() : '#ebf8ff',
-            color: isHovered ? 'white' : '#2c5282',
-          }}
-        >
-          View Details →
-        </button>
       </div>
     </div>
-  )
+  );
 }
-
-export default EventCard

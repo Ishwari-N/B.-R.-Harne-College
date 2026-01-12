@@ -1,4 +1,16 @@
+'use client';
+
+import Link from 'next/link';
+
 export default function Footer() {
+  // Quick Links with paths to your quick-links folder
+  const quickLinks = [
+    { name: 'Academic Calendar', path: '/quick-links/academic-calendar' },
+    { name: 'Student Portal', path: '/quick-links/student-portal' },
+    { name: 'Library Resources', path: '/quick-links/library-resources' },
+    { name: 'Careers', path: '/quick-links/careers' },
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-8 mt-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -12,10 +24,16 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold text-lg mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white">Academic Calendar</a></li>
-            <li><a href="#" className="hover:text-white">Student Portal</a></li>
-            <li><a href="#" className="hover:text-white">Library Resources</a></li>
-            <li><a href="#" className="hover:text-white">Careers</a></li>
+            {quickLinks.map((link) => (
+              <li key={link.path}>
+                <Link 
+                  href={link.path}
+                  className="hover:text-white transition-colors duration-200 block"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -58,7 +76,7 @@ export default function Footer() {
             {/* LinkedIn */}
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <svg className="w-8 h-8 text-blue-700 hover:scale-125 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.762 0-5 2.238-5 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.762-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.966 0-1.75-.79-1.75-1.76s.784-1.76 1.75-1.76c.966 0 1.75.79 1.75 1.76s-.784 1.76-1.75 1.76zm13.5 11.27h-3v-5.5c0-1.31-.027-3-1.828-3-1.832 0-2.112 1.43-2.112 2.905v5.595h-3v-10h2.884v1.367h.041c.402-.762 1.382-1.565 2.845-1.565 3.04 0 3.6 2 3.6 4.595v5.603z"/>
+                <path d="M19 0h-14c — 2.762 0-5 2.238-5 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.762-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.966 0-1.75-.79-1.75-1.76s.784-1.76 1.75-1.76c.966 0 1.75.79 1.75 1.76s-.784 1.76-1.75 1.76zm13.5 11.27h-3v-5.5c0-1.31-.027-3-1.828-3-1.832 0-2.112 1.43-2.112 2.905v5.595h-3v-10h2.884v1.367h.041c.402-.762 1.382-1.565 2.845-1.565 3.04 0 3.6 2 3.6 4.595v5.603z"/>
               </svg>
             </a>
           </div>

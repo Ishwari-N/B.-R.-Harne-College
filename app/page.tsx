@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { getHighlightedEvents } from '@/app/data/events-data'; // Import the function
 
 /* ================= IMAGE SLIDER ================= */
 
@@ -176,159 +177,152 @@ function InstitutionDetailsSection() {
   ];
 
   return (
-  <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+  <div className="max-w-7xl mx-auto px-3 sm:px-4 py-9 sm:py-8">
     {/* Two Column Grid */}
     <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 h-auto lg:h-[400px]">
       
-      {/* Left Column - Institution Details */}
-      <div className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
-        {/* Header with gradient */}
-        <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] p-3 sm:p-4 group-hover:from-[#0bc22d]/90 group-hover:to-[#F39C12]/90 transition-all duration-500">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/50 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-              <span className="text-white text-sm sm:text-base">🏛️</span>
-            </div>
-            <div className="flex-grow">
-              <div className="flex items-center gap-2">
-                <h3 className="text-lg sm:text-xl font-bold text-white drop-shadow-sm">Institution Details</h3>
-              </div>
-              <p className="text-white/90 text-xs sm:text-sm mt-0.5">Official contact information</p>
+   {/* Left Column - Institution Details */}
+<div className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+  {/* Header with gradient */}
+  <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] p-3 sm:p-4">
+    <div className="flex items-center gap-2 sm:gap-3">
+      <div className="w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-white/50 flex items-center justify-center">
+        <span className="text-white text-sm sm:text-base">🏛️</span>
+      </div>
+      <div className="flex-grow">
+        <div className="flex items-center gap-2">
+          <h3 className="text-lg sm:text-xl font-bold text-white">Institution Details</h3>
+        </div>
+        <p className="text-white/90 text-xs sm:text-sm mt-0.5">Official contact information</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Details Content */}
+  <div className="p-3 sm:p-4">
+    <div className="space-y-2">
+      {/* Codes */}
+      <div className="grid grid-cols-2 gap-2 mb-3">
+        <div className="bg-gray-50 rounded-lg p-2 text-center">
+          <div className="text-xs text-gray-500">College Code</div>
+          <div className="font-bold text-gray-800 text-xs sm:text-sm">{institutionDetails.collegeCode}</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-2 text-center">
+          <div className="text-xs text-gray-500">DMER/ARA Code</div>
+          <div className="font-bold text-gray-800 text-xs sm:text-sm">{institutionDetails.dmerCode}</div>
+        </div>
+      </div>
+
+      {/* Contact Details */}
+      <div className="space-y-2">
+        {/* Email */}
+        <div className="flex items-center gap-2 p-2">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
+            <span className="text-[#0bc22d] text-xs sm:text-sm">📧</span>
+          </div>
+          <div className="flex-grow">
+            <div className="text-xs text-gray-500">E-Mail</div>
+            <a 
+              href={`mailto:${institutionDetails.email}`}
+              className="font-medium text-gray-800 text-xs block truncate"
+            >
+              {institutionDetails.email}
+            </a>
+          </div>
+        </div>
+
+        {/* Phone Numbers */}
+        <div className="flex items-center gap-2 p-2">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
+            <span className="text-[#0bc22d] text-xs sm:text-sm">📞</span>
+          </div>
+          <div className="flex-grow">
+            <div className="text-xs text-gray-500">Mobile</div>
+            <div className="space-y-0.5">
+              {institutionDetails.phone.map((number, idx) => (
+                <a 
+                  key={idx}
+                  href={`tel:${number}`}
+                  className="block font-medium text-gray-800 text-xs"
+                >
+                  {number}
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Details Content */}
-        <div className="p-3 sm:p-4">
-          <div className="space-y-3">
-            {/* Codes */}
-            <div className="grid grid-cols-2 gap-2 mb-3">
-              <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-100 hover:border-[#0bc22d]/30 hover:shadow-md hover:scale-[1.02] transition-all duration-300 group-hover:delay-100">
-                <div className="text-xs text-gray-500 group-hover:text-[#0bc22d] transition-colors duration-300">College Code</div>
-                <div className="font-bold text-gray-800 text-xs sm:text-sm group-hover:text-[#0bc22d] transition-colors duration-300">{institutionDetails.collegeCode}</div>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-100 hover:border-[#F39C12]/30 hover:shadow-md hover:scale-[1.02] transition-all duration-300 group-hover:delay-200">
-                <div className="text-xs text-gray-500 group-hover:text-[#F39C12] transition-colors duration-300">DMER/ARA Code</div>
-                <div className="font-bold text-gray-800 text-xs sm:text-sm group-hover:text-[#F39C12] transition-colors duration-300">{institutionDetails.dmerCode}</div>
-              </div>
-            </div>
-
-            {/* Contact Details */}
-            <div className="space-y-2">
-              {/* Email */}
-              <div className="flex items-center gap-2 p-2 bg-gray-50/50 rounded-lg hover:bg-gradient-to-r hover:from-[#0bc22d]/5 hover:to-[#F39C12]/5 hover:shadow-md hover:-translate-y-0.5 hover:border-[#0bc22d]/30 transition-all duration-300 border border-gray-100 group-hover:delay-300">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center group-hover:scale-110 group-hover:from-[#0bc22d]/20 group-hover:to-[#F39C12]/20 transition-all duration-300">
-                  <span className="text-[#0bc22d] text-xs sm:text-sm group-hover:scale-110 transition-transform">📧</span>
-                </div>
-                <div className="flex-grow">
-                  <div className="text-xs text-gray-500 group-hover:text-[#0bc22d] transition-colors duration-300">E-Mail</div>
-                  <a 
-                    href={`mailto:${institutionDetails.email}`}
-                    className="font-medium text-gray-800 hover:text-[#0bc22d] transition-colors text-xs block truncate group-hover:font-semibold"
-                  >
-                    {institutionDetails.email}
-                  </a>
-                </div>
-              </div>
-
-              {/* Phone Numbers */}
-              <div className="flex items-center gap-2 p-2 bg-gray-50/50 rounded-lg hover:bg-gradient-to-r hover:from-[#0bc22d]/5 hover:to-[#F39C12]/5 hover:shadow-md hover:-translate-y-0.5 hover:border-[#F39C12]/30 transition-all duration-300 border border-gray-100 group-hover:delay-400">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center group-hover:scale-110 group-hover:from-[#0bc22d]/20 group-hover:to-[#F39C12]/20 transition-all duration-300">
-                  <span className="text-[#0bc22d] text-xs sm:text-sm group-hover:scale-110 transition-transform">📞</span>
-                </div>
-                <div className="flex-grow">
-                  <div className="text-xs text-gray-500 group-hover:text-[#F39C12] transition-colors duration-300">Mobile</div>
-                  <div className="space-y-0.5">
-                    {institutionDetails.phone.map((number, idx) => (
-                      <a 
-                        key={idx}
-                        href={`tel:${number}`}
-                        className="block font-medium text-gray-800 hover:text-[#F39C12] transition-colors text-xs group-hover:font-semibold"
-                      >
-                        {number}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Address */}
-              <div className="flex items-start gap-2 p-2 bg-gray-50/50 rounded-lg hover:bg-gradient-to-r hover:from-[#0bc22d]/5 hover:to-[#F39C12]/5 hover:shadow-md hover:-translate-y-0.5 hover:border-[#0bc22d]/30 transition-all duration-300 border border-gray-100 group-hover:delay-500">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center group-hover:scale-110 group-hover:from-[#0bc22d]/20 group-hover:to-[#F39C12]/20 transition-all duration-300">
-                  <span className="text-[#0bc22d] text-xs sm:text-sm group-hover:scale-110 transition-transform">📍</span>
-                </div>
-                <div className="flex-grow">
-                  <div className="text-xs text-gray-500 mb-0.5 group-hover:text-[#0bc22d] transition-colors duration-300">Office Address</div>
-                  <div className="font-medium text-gray-800 text-xs leading-tight group-hover:text-gray-900 group-hover:font-semibold transition-all duration-300">
-                    {institutionDetails.address}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Networks */}
-            <div className="pt-2">
-              <h2 className="text-xs sm:text-sm font-bold text-[#044614] mb-1.5 group-hover:text-[#0bc22d] transition-colors duration-300">Follow Us:</h2>
-              <div className="flex gap-2">
-                {/* Facebook */}
-                <a href="https://www.facebook.com/brhcop/" target="_blank" rel="noopener noreferrer" 
-                   className="hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.406.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.676V1.325C24 .593 23.406 0 22.675 0z"/>
-                  </svg>
-                </a>
-
-                {/* Google */}
-                <a href="https://www.google.com/search?q=B.+R.+Harne+College+of+Pharmacy" target="_blank" rel="noopener noreferrer" aria-label="Google" 
-                   className="hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                 <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 533.5 544.3">
-                  <path fill="#4285F4" d="M533.5 278.4c0-17.4-1.4-34.1-4.1-50.3H272v95h146.9c-6.3 34-25.1 62.8-53.6 82v68h86.4c50.5-46.5 79.8-115.1 79.8-194.7z"/>
-                  <path fill="#34A853" d="M272 544.3c72.6 0 133.5-24.1 178-65.5l-86.4-68c-23.9 16-54.5 25.4-91.6 25.4-70.5 0-130-47.7-151.4-111.3H32.5v69.9c44.1 87.5 134.6 150.5 239.5 150.5z"/>
-                  <path fill="#FBBC05" d="M120.5 319.1c-10.7-32-10.7-66.8 0-98.8v-69.9H32.5c-39.5 78.8-39.5 172.4 0 251.2l88-82.5z"/>
-                  <path fill="#EA4335" d="M272 107.1c38.5-.6 73.1 13.2 100.5 39.1l75.3-75.3C406.5 24.7 344.6-.4 272 0 167.1 0 76.6 63 32.5 150.5l88 69.9C142 154.8 201.5 107.1 272 107.1z"/>
-                 </svg>
-                </a>
-
-                {/* Instagram */}
-                <a href="https://www.instagram.com/brharnecollegeofpharmacy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" 
-                   className="hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24">
-                    <defs>
-                    <linearGradient id="insta-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#feda75"/>
-                      <stop offset="25%" stopColor="#fa7e1e"/>
-                      <stop offset="50%" stopColor="#d62976"/>
-                      <stop offset="75%" stopColor="#962fbf"/>
-                      <stop offset="100%" stopColor="#4f5bd5"/>
-                    </linearGradient>
-                    </defs>
-                    <path 
-                    fill="url(#insta-gradient)" 
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"
-                    />
-                  </svg>
-                </a>
-
-                {/* LinkedIn */}
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" 
-                   className="hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
+        {/* Address */}
+        <div className="flex items-start gap-2 p-2">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
+            <span className="text-[#0bc22d] text-xs sm:text-sm">📍</span>
+          </div>
+          <div className="flex-grow">
+            <div className="text-xs text-gray-500 mb-0.5">Office Address</div>
+            <div className="font-medium text-gray-800 text-xs leading-tight">
+              {institutionDetails.address}
             </div>
           </div>
         </div>
       </div>
 
+      {/* Social Networks */}
+      <div className="pt-2">
+        <h2 className="text-xs sm:text-sm font-bold text-[#044614] mb-1.5">Follow Us:</h2>
+        <div className="flex gap-2">
+          {/* Facebook */}
+          <a href="https://www.facebook.com/brhcop/" target="_blank" rel="noopener noreferrer">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.406.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.676V1.325C24 .593 23.406 0 22.675 0z"/>
+            </svg>
+          </a>
+
+          {/* Google */}
+          <a href="https://www.google.com/search?q=B.+R.+Harne+College+of+Pharmacy" target="_blank" rel="noopener noreferrer" aria-label="Google">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 533.5 544.3">
+              <path fill="#4285F4" d="M533.5 278.4c0-17.4-1.4-34.1-4.1-50.3H272v95h146.9c-6.3 34-25.1 62.8-53.6 82v68h86.4c50.5-46.5 79.8-115.1 79.8-194.7z"/>
+              <path fill="#34A853" d="M272 544.3c72.6 0 133.5-24.1 178-65.5l-86.4-68c-23.9 16-54.5 25.4-91.6 25.4-70.5 0-130-47.7-151.4-111.3H32.5v69.9c44.1 87.5 134.6 150.5 239.5 150.5z"/>
+              <path fill="#FBBC05" d="M120.5 319.1c-10.7-32-10.7-66.8 0-98.8v-69.9H32.5c-39.5 78.8-39.5 172.4 0 251.2l88-82.5z"/>
+              <path fill="#EA4335" d="M272 107.1c38.5-.6 73.1 13.2 100.5 39.1l75.3-75.3C406.5 24.7 344.6-.4 272 0 167.1 0 76.6 63 32.5 150.5l88 69.9C142 154.8 201.5 107.1 272 107.1z"/>
+            </svg>
+          </a>
+
+          {/* Instagram */}
+          <a href="https://www.instagram.com/brharnecollegeofpharmacy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg className="w-7 h-7" viewBox="0 0 512 512">
+              <linearGradient id="insta-gradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stopColor="#feda75"/>
+                <stop offset="25%" stopColor="#fa7e1e"/>
+                <stop offset="50%" stopColor="#d62976"/>
+                <stop offset="75%" stopColor="#962fbf"/>
+                <stop offset="100%" stopColor="#4f5bd5"/>
+              </linearGradient>
+              <path fill="url(#insta-gradient)" d="M349.33 69.33H162.67C111.41 69.33 69.33 111.41 69.33 162.67v186.67c0 51.26 42.08 93.34 93.34 93.34h186.66c51.26 0 93.34-42.08 93.34-93.34V162.67c0-51.26-42.08-93.34-93.34-93.34zm61.33 280c0 33.92-27.41 61.33-61.33 61.33H162.67c-33.92 0-61.33-27.41-61.33-61.33V162.67c0-33.92 27.41-61.33 61.33-61.33h186.66c33.92 0 61.33 27.41 61.33 61.33v186.66z"/>
+              <circle cx="256" cy="256" r="80" fill="url(#insta-gradient)"/>
+              <circle cx="390" cy="122" r="20" fill="url(#insta-gradient)"/>
+            </svg>
+          </a>
+
+          {/* LinkedIn */}
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     {/* Right Column - What's New */}
-<div className="bg-white rounded-xl sm:rounded-2xl shadow-sm overflow-hidden relative group hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+<div className="bg-white rounded-xl sm:rounded-2xl shadow-sm overflow-hidden relative">
   {/* Decorative corner elements */}
   <div className="absolute top-0 left-0 w-4 h-4 sm:w-6 sm:h-6 border-l-2 border-t-2 border-[#0bc22d] rounded-tl-xl group-hover:w-6 group-hover:h-6 sm:group-hover:w-8 sm:group-hover:h-8 transition-all duration-500"></div>
   <div className="absolute top-0 right-0 w-4 h-4 sm:w-6 sm:h-6 border-r-2 border-t-2 border-[#F39C12] rounded-tr-xl group-hover:w-6 group-hover:h-6 sm:group-hover:w-8 sm:group-hover:h-8 transition-all duration-500"></div>
   
   {/* Header with gradient and blinking indicator */}
-  <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] p-2 sm:p-3 relative overflow-hidden group-hover:from-[#0bc22d]/90 group-hover:to-[#F39C12]/90 transition-all duration-500">  
+  <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] p-2 sm:p-3 relative overflow-hidden">  
     <div className="flex items-center gap-2 sm:gap-3 relative z-10">
       <div className="relative">
         {/* Optional: Add pulsing effect */}
@@ -351,13 +345,12 @@ function InstitutionDetailsSection() {
 
   <div className="p-2 sm:p-3 bg-gradient-to-b from-white to-gray-50/50 group-hover:to-white transition-all duration-500">
     {/* Decorative vertical line */}
-    <div className="absolute left-4 sm:left-8 top-12 sm:top-16 bottom-4 sm:bottom-8 w-0.5 bg-gradient-to-b from-[#0bc22d] via-gray-500 to-transparent group-hover:from-[#0bc22d] group-hover:via-[#F39C12] group-hover:to-transparent transition-all duration-500"></div>
-    
+    <div className="absolute left-4 sm:left-8 top-12 sm:top-16 bottom-4 sm:bottom-8 w-0.5 bg-gradient-to-b from-[#0bc22d] via-gray-500 to-transparent "></div>
     <div className="space-y-2 sm:space-y-3 relative pl-2">
       {whatsNewItems.slice(0, 7).map((item, index) => (
         <div 
           key={item.id}
-          className="group/item relative pl-4 sm:pl-5 py-1 sm:py-1.5 rounded-lg border-l-4 border-transparent hover:border-l-4 hover:bg-gradient-to-r hover:from-[#0bc22d]/5 hover:to-[#F39C12]/5 hover:shadow-sm hover:-translate-x-1 transition-all duration-300 cursor-pointer"
+          className="group/item relative pl-4 sm:pl-5 py-1 sm:py-1.5 rounded-lg border-l-4 border-transparent cursor-pointer"
           style={{ transitionDelay: `${index * 50}ms` }}
         >
           {/* Custom bullet point */}
@@ -597,41 +590,8 @@ export default function HomePage() {
     }
   ]);
 
-  const highlightedEvents = [
-    {
-      id: 1,
-      title: "National Physiotherapy Conference 2024",
-      description: "College hosted the annual national conference with over 500 delegates from various institutions across the state. The event featured keynote speeches, research presentations, and hands-on workshops.",
-      category: "Achievement",
-      image: "/award.jpeg",
-      details: "Hosted 500+ Delegates",
-      icon: "👥",
-      link: "/events/conference-2024",
-      date: "March 15-16, 2024"
-    },
-    {
-      id: 2,
-      title: "Best College Award 2023-24",
-      description: "Recognized as the best physiotherapy college in the state for academic excellence, infrastructure, and student outcomes. The award was presented by the State Health Education Department.",
-      category: "Recognition",
-      image: "/sports.jpeg",
-      details: "State Level Award",
-      icon: "🏆",
-      link: "/events/award-2023",
-      date: "December 10, 2023"
-    },
-    {
-      id: 3,
-      title: "Community Health Camp Success",
-      description: "Served over 2000 patients in rural health camps organized across multiple villages. Provided free physiotherapy consultations, basic health check-ups, and awareness sessions.",
-      category: "Achievement",
-      image: "/health.jpeg",
-      details: "2000+ Patients Served",
-      icon: "❤️",
-      link: "/events/health-camp",
-      date: "November 5-10, 2023"
-    }
-  ];
+  // Get highlighted events from events-data.ts
+  const highlightedEvents = getHighlightedEvents();
 
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -890,7 +850,7 @@ export default function HomePage() {
                   {/* Event Image */}
                   <div className="relative h-40 sm:h-48 overflow-hidden">
                     <img 
-                      src={event.image}
+                      src={`/${event.image}`}
                       alt={event.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
@@ -899,7 +859,7 @@ export default function HomePage() {
                           "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80",
                           "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=600&q=80",
                         ];
-                        e.currentTarget.src = fallbackImages[event.id - 1];
+                        e.currentTarget.src = fallbackImages[event.id - 9] || fallbackImages[0];
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/30 transition-all duration-500"></div>
@@ -907,6 +867,7 @@ export default function HomePage() {
                       <span className={`px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold hover:scale-105 transition-transform duration-300 ${
                         event.category === 'Achievement' ? 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200' :
                         event.category === 'Recognition' ? 'bg-purple-100 text-purple-900 hover:bg-purple-200' :
+                        event.category === 'Camp' ? 'bg-green-100 text-green-600 hover:bg-green-200' :
                         'bg-pink-100 text-pink-800 hover:bg-pink-200'
                       }`}>
                         {event.category}
@@ -928,15 +889,22 @@ export default function HomePage() {
                     
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
-                        <span className="group-hover:scale-110 transition-transform duration-300">{event.icon}</span>
-                        <span className="truncate group-hover:font-medium transition-all duration-300">{event.details}</span>
+                        <span className="group-hover:scale-110 transition-transform duration-300">{event.emoji}</span>
+                        <span className="truncate group-hover:font-medium transition-all duration-300">
+                          {event.id === 9 ? 'Hosted 500+ Delegates' :
+                           event.id === 10 ? 'State Level Award' :
+                           event.id === 11 ? '2000+ Patients Served' :
+                           event.location || event.capacity || event.details}
+                        </span>
                       </div>
-                      <button 
-                        onClick={() => handleViewDetails(event)}
+                      
+                      {/* Replace button with Link for navigation */}
+                      <Link 
+                        href={`/events/${event.slug}`}
                         className="text-[#067825] font-semibold hover:text-[#324213] hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
                       >
                         View Details →
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
