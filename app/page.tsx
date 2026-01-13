@@ -894,7 +894,7 @@ export default function HomePage() {
                           {event.id === 9 ? 'Hosted 500+ Delegates' :
                            event.id === 10 ? 'State Level Award' :
                            event.id === 11 ? '2000+ Patients Served' :
-                           event.location || event.capacity || event.details}
+                           event.location || event.capacity}
                         </span>
                       </div>
                       

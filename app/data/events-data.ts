@@ -51,7 +51,6 @@ export const eventsData: Event[] = [
     emoji: "🎤",
     price: "Free",
     capacity: "500+",
-    details: "International conference with global experts sharing latest physiotherapy advancements.",
     fullDescription: "The International Physiotherapy Conference 2026 brings together leading physiotherapy experts, researchers, and students from around the world to discuss cutting-edge research and clinical practices. This three-day event features keynote speeches, research paper presentations, hands-on workshops, and networking opportunities.",
     highlights: [
       "Keynote speeches by international experts",
@@ -85,7 +84,6 @@ export const eventsData: Event[] = [
     emoji: "🧠",
     price: "₹500",
     capacity: "200",
-    details: "Specialized symposium on neurological rehabilitation for stroke and spinal cord injury patients.",
     fullDescription: "This specialized symposium focuses on the latest advancements in neurological rehabilitation techniques and technologies for stroke and spinal cord injury patients. Featuring demonstrations of cutting-edge equipment and treatment protocols.",
     highlights: [
       "Latest neuro-rehabilitation techniques",
@@ -119,7 +117,6 @@ export const eventsData: Event[] = [
     emoji: "🏆",
     price: "₹750",
     capacity: "300",
-    details: "Summit focused on sports injury prevention, management, and athlete performance enhancement.",
     fullDescription: "Comprehensive summit focusing on sports injury prevention, management, and performance enhancement techniques for athletes of all levels. Includes practical workshops on sports taping, rehabilitation protocols, and performance analysis.",
     highlights: [
       "Sports injury prevention workshops",
@@ -152,7 +149,6 @@ export const eventsData: Event[] = [
     emoji: "👶",
     price: "Free",
     capacity: "50",
-    details: "Workshop on developmental disorders and pediatric rehabilitation techniques for children.",
     fullDescription: "Hands-on workshop focusing on developmental disorders, childhood disabilities, and advanced pediatric rehabilitation techniques. Includes interactive sessions with child development experts and practical demonstrations.",
     highlights: [
       "Developmental disorder management",
@@ -186,7 +182,6 @@ export const eventsData: Event[] = [
     emoji: "🤝",
     price: "Free",
     capacity: "Unlimited",
-    details: "Free community health camp providing physiotherapy services to rural populations.",
     fullDescription: "Large-scale community health initiative providing free physiotherapy consultations, treatments, and health education to underserved rural populations across Maharashtra. Organized in collaboration with local health authorities.",
     highlights: [
       "Free health checkups",
@@ -219,7 +214,6 @@ export const eventsData: Event[] = [
     emoji: "❤️",
     price: "₹600",
     capacity: "250",
-     details: "Conference on cardiac rehabilitation, post-cardiac care, and cardiovascular health management.",
     fullDescription: "Specialized conference focusing on cardiac rehabilitation, post-cardiac care, and cardiovascular health management. Features latest research and clinical practices.",
     highlights: [
       "Cardiac rehabilitation protocols",
@@ -252,7 +246,6 @@ export const eventsData: Event[] = [
     emoji: "👴",
     price: "Free",
     capacity: "100",
-    details: "Workshop on elderly care, mobility enhancement, fall prevention, and senior quality of life.",
     fullDescription: "Practical workshop focusing on elderly care, mobility enhancement, fall prevention, and quality of life improvement for senior citizens.",
     highlights: [
       "Fall prevention strategies",
@@ -285,7 +278,6 @@ export const eventsData: Event[] = [
     emoji: "🧘",
     price: "₹400",
     capacity: "150",
-    details: "Symposium on integrating traditional yoga practices with modern physiotherapy techniques.",
     fullDescription: "Exploring the integration of traditional yoga practices with modern physiotherapy techniques for holistic health and rehabilitation.",
     highlights: [
       "Yoga therapy demonstrations",
@@ -319,7 +311,6 @@ export const eventsData: Event[] = [
     emoji: "👥",
     price: "Free",
     capacity: "500+",
-    details: "National conference hosted by college with 500+ delegates, featuring research and workshops.",
     fullDescription: "The National Physiotherapy Conference 2024 was successfully hosted by our college with participation from over 500 delegates representing various institutions across the state. The event featured keynote speeches by renowned physiotherapy experts, research paper presentations, and practical hands-on workshops.",
     highlights: [
       "Keynote speeches by national experts",
@@ -352,7 +343,6 @@ export const eventsData: Event[] = [
     emoji: "🏆",
     price: "Free",
     capacity: "N/A",
-     details: "Awarded as the best physiotherapy college in the state for academic excellence and infrastructure.",
     fullDescription: "B.R. Harne College of Physiotherapy was honored with the 'Best College Award 2023-24' by the State Health Education Department for outstanding performance in academic excellence, infrastructure development, and exceptional student outcomes. This prestigious award recognizes our commitment to quality education and holistic development of students.",
     highlights: [
       "Recognition for academic excellence",
@@ -385,7 +375,6 @@ export const eventsData: Event[] = [
     emoji: "❤️",
     price: "Free",
     capacity: "2000+",
-    details: "Health camp serving 2000+ patients with free physiotherapy consultations and health checkups.",
     fullDescription: "Our college organized a massive community health camp initiative across multiple rural villages in Maharashtra, serving over 2000 patients. The camp provided free physiotherapy consultations, basic health check-ups, health awareness sessions, and distributed essential mobility aids to the underserved population.",
     highlights: [
       "Served 2000+ patients",
