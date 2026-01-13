@@ -292,18 +292,6 @@ export default async function EventDetailPageComponent({ params }: { params: Pro
           </div>
         </VideoPlayerProvider>
       </section>
-
-      {/* Register Button at the end */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="text-center">
-          <button className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white px-12 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:cursor-pointer">
-            Register Now
-          </button>
-          <p className="mt-4 text-gray-600">
-            Limited seats available • Early bird discounts until {event.date}
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

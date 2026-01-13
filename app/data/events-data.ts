@@ -297,8 +297,8 @@ export const eventsData: Event[] = [
   // Highlighted Events (Added with your data)
   {
     id: 9,
-    title: "National Physiotherapy Conference 2024",
-    slug: generateSlug("National Physiotherapy Conference 2024"),
+    title: "National Physiotherapy Conference",
+    slug: generateSlug("National Physiotherapy Conference"),
     description: "College hosted the annual national conference with over 500 delegates from various institutions across the state. The event featured keynote speeches, research presentations, and hands-on workshops.",
     location: "College Auditorium",
     date: "March 15-16, 2024",
@@ -329,8 +329,8 @@ export const eventsData: Event[] = [
   },
   {
     id: 10,
-    title: "Best College Award 2023-24",
-    slug: generateSlug("Best College Award 2023-24"),
+    title: "Best College Award",
+    slug: generateSlug("Best College Award"),
     description: "Recognized as the best physiotherapy college in the state for academic excellence, infrastructure, and student outcomes. The award was presented by the State Health Education Department.",
     location: "State Health Department, Mumbai",
     date: "December 10, 2023",
@@ -361,8 +361,8 @@ export const eventsData: Event[] = [
   },
   {
     id: 11,
-    title: "Community Health Camp Success 2023",
-    slug: generateSlug("Community Health Camp Success 2023"),
+    title: "Community Health Camp Success",
+    slug: generateSlug("Community Health Camp Success"),
     description: "Served over 2000 patients in rural health camps organized across multiple villages. Provided free physiotherapy consultations, basic health check-ups, and awareness sessions.",
     location: "Rural Maharashtra Villages",
     date: "November 5-10, 2023",
