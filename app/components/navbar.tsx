@@ -363,38 +363,8 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Mobile Compact Horizontal Navbar */}
-      <div className="md:hidden w-full bg-gradient-to-r from-[#0bc22d] to-[#F39C12]">
-        <div className="px-1 py-1">
-          <div className="flex flex-wrap justify-center items-center gap-x-1 gap-y-0.5">
-            <Link
-              href="/"
-              className="font-bold text-white hover:text-black transition-colors text-[10px] px-1 py-0.5"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-
-            {Object.entries(dropdownItems).slice(0, 3).map(([key]) => (
-              <button
-                key={key}
-                onClick={() => toggleDropdown(key)}
-                className="font-semibold text-white hover:text-black transition-colors text-[10px] px-1 py-0.5 flex items-center gap-0.5"
-              >
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-                <span className="text-[5px]">▼</span>
-              </button>
-            ))}
-
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="font-bold text-white hover:text-black transition-colors text-[10px] px-1 py-0.5"
-            >
-              More...
-            </button>
-          </div>
-        </div>
-      </div>
+      {/* REMOVED: Mobile Compact Horizontal Navbar - Completely removed */}
+      {/* No horizontal navbar on mobile, only vertical menu when hamburger is clicked */}
     </header>
   );
 }
