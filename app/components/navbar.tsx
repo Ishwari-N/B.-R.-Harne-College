@@ -72,7 +72,7 @@ export default function Navbar() {
   return (
     <header className="w-full shadow-md bg-white sticky top-0 z-50">
       {/* Header */}
-      <div className="w-full py-3 bg-white border-b border-gray-300">
+      <div className="w-full py-2 bg-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto px-2">
           {/* Mobile Header - Simplified */}
           <div className="md:hidden flex items-center justify-between py-2 px-1">
@@ -80,12 +80,12 @@ export default function Navbar() {
             <img
               src="/weblogo.png"
               alt="College Logo"
-              className="w-12 h-12 object-contain"
+              className="w-18 h-18 object-contain"
             />
             
             {/* College Name - Mobile - Centered */}
             <div className="flex-1 text-center px-1">
-              <p className="text-[7px] font-sans font-extrabold uppercase text-[#DC3545] leading-tight">
+              <p className="text-[8px] font-sans font-extrabold uppercase text-[#DC3545] leading-tight">
                 JAI SHRI SIDDHIVINAYAK FOUNDATION'S
               </p>
               <h1 className="text-sm font-bold text-[#B74C70] leading-tight mt-0.5">
@@ -116,7 +116,7 @@ export default function Navbar() {
             <img
               src="/weblogo.png"
               alt="College Logo"
-              className="w-20 h-20 lg:w-33 lg:h-33 object-contain"
+              className="w-20 h-20 lg:w-35 lg:h-35 object-contain"
             />
 
             {/* Center Text Content */}
@@ -127,17 +127,17 @@ export default function Navbar() {
               </p>
 
               {/* College Name - Dark Blue */}
-              <h1 className="text-xl lg:text-3xl font-bold text-[#B74C70] -tracking-wide leading-tight mt-0.5">
+              <h1 className="text-xl lg:text-4xl font-bold text-[#B74C70] -tracking-wide leading-tight mt-0.5">
                 B. R. Harne College of Physiotherapy
               </h1>
 
               {/* Address - Black */}
-              <p className="text-[#F39C12] text-xs lg:text-sm font-sans font-bold leading-tight mt-0">
+              <p className="text-[#F39C12] text-xs lg:text-sm font-sans font-bold leading-tight mt-0.5">
                 Karav, Vangani (W), Ambernath, Dist : Thane - 421503
               </p>
 
               {/* Recognition - Green */}
-              <p className="text-[#536678] text-xs lg:text-sm font-bold font-sans leading-tight mt-0.5">
+              <p className="text-[#536678] text-xs lg:text-sm font-bold font-sans leading-tight mt-2">
                 Recognized by the Govt. of Maharashtra
               </p>
 
@@ -149,9 +149,9 @@ export default function Navbar() {
 
             {/* Right Logo */}
             <img
-              src="/foundation-logo.jpeg"
+              src="/foundation-2.png"
               alt="Foundation Logo"
-              className="w-20 h-20 lg:w-33 lg:h-33 object-contain"
+              className="w-20 h-20 lg:w-35 lg:h-35 object-contain"
             />
           </div>
         </div>
@@ -176,9 +176,11 @@ export default function Navbar() {
                 <button
                   className="font-semibold text-white hover:text-black transition-colors text-sm px-2 py-1 flex items-center gap-1 focus:outline-none"
                 >
-                  {key.split('-').map(word => 
-                    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-                  ).join(' ')} 
+                  {key === 'muhs-mandate' ? 'MUHS-Mandate' : 
+                    key.split('-').map(word => 
+                      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                    ).join(' ')
+                  }
                   <span className="text-[6px] transition-transform duration-200 group-hover:rotate-180">▼</span>
                 </button>
                 
@@ -286,9 +288,11 @@ export default function Navbar() {
                        key === 'muhs-mandate' ? '📜' : '📌'}
                     </span>
                     <span>
-                      {key.split('-').map(word => 
-                        word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-                      ).join(' ')}
+                      {key === 'muhs-mandate' ? 'MUHS-Mandate' : 
+                        key.split('-').map(word => 
+                          word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                        ).join(' ')
+                      }
                     </span>
                   </div>
                   <span className={`transform transition-transform text-xs ${openDropdown === key ? 'rotate-180' : ''}`}>

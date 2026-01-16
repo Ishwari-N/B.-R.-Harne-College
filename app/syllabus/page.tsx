@@ -74,7 +74,7 @@ export default function SyllabusPage() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-2 py-3">
         {/* Page Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-5">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Syllabus <span className="bg-gradient-to-r from-[#1c852f] to-[#896222] bg-clip-text text-transparent">B.P.Th</span>
           </h1>

@@ -27,11 +27,8 @@ export default function RankersPage() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 py-6">
         {/* Page Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-3.5">
           <div className="inline-flex items-center gap-4 mb-4">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-green-100 to-orange-100 flex items-center justify-center">
-              <span className="text-4xl">🏆</span>
-            </div>
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-[#0F2A44]">
                 MUHS Exam College Rankers
@@ -44,9 +41,8 @@ export default function RankersPage() {
         </div>
      {/* Rankers Table */}
         <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden mb-8">
-          <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white p-4">
+          <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white p-3">
             <h2 className="text-xl font-bold flex items-center gap-3">
-              <span className="text-2xl">📊</span>
               Academic Session Results
             </h2>
             <p className="text-green-100 text-sm mt-1">MUHS Exam Rankers - Winter 2024 & Summer 2025</p>
@@ -55,34 +51,6 @@ export default function RankersPage() {
           {/* Desktop Table */}
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="py-4 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
-                    <div className="flex items-center gap-2">
-                      <span>🔢</span>
-                      <span>Sr. No</span>
-                    </div>
-                  </th>
-                  <th className="py-4 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
-                    <div className="flex items-center gap-2">
-                      <span>📅</span>
-                      <span>Academic Session</span>
-                    </div>
-                  </th>
-                  <th className="py-4 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
-                    <div className="flex items-center gap-2">
-                      <span>📁</span>
-                      <span>File</span>
-                    </div>
-                  </th>
-                  <th className="py-4 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
-                    <div className="flex items-center gap-2">
-                      <span>🔗</span>
-                      <span>Action</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
               <tbody className="divide-y divide-gray-100">
                 {rankerData.map((item, index) => (
                   <tr 
@@ -93,24 +61,15 @@ export default function RankersPage() {
                   >
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                          index === 0 
-                            ? 'bg-gradient-to-r from-green-600 to-green-800' 
-                            : 'bg-gradient-to-r from-orange-600 to-orange-800'
-                        }`}>
-                          {index + 1}
+                        <div className="flex items-center gap-3">
+                          <div className="text-lg font-medium text-gray-800">
+                           {index + 1}.
+                          </div>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                          index === 0 
-                            ? 'bg-green-100 text-green-700 border border-green-200' 
-                            : 'bg-orange-100 text-orange-700 border border-orange-200'
-                        }`}>
-                          {index === 0 ? '❄️' : '☀️'}
-                        </div>
                         <div>
                           <div className="font-bold text-gray-800">{item.session}</div>
                           <div className="text-sm text-gray-500">MUHS Examination Results</div>
@@ -119,9 +78,6 @@ export default function RankersPage() {
                     </td>
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                          <span className="text-blue-600">📄</span>
-                        </div>
                         <div>
                           <div className="font-medium text-gray-800">{item.fileName}</div>
                           <div className="text-xs text-gray-500">PDF Document</div>

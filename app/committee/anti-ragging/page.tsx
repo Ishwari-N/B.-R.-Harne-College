@@ -124,10 +124,7 @@ export default function AntiRaggingPage() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
-              <span className="text-2xl">🛡️</span>
-            </div>
+          <div className="inline-flex items-center gap-3 mb-4 pt-3">
             <h1 className="text-3xl md:text-4xl font-bold bg-gradient bg-black bg-clip-text text-transparent">
               Anti-Ragging Committee
             </h1>
@@ -135,41 +132,6 @@ export default function AntiRaggingPage() {
           <p className="text-gray-600 max-w-3xl mx-auto">
             Ensuring a safe and ragging-free environment for all students
           </p>
-        </div>
-
-        {/* Committee Information Card */}
-        <div className="bg-gradient-to-r from-[#E8F5E9] to-[#FFF3E0] rounded-xl p-6 mb-8 border border-[#C8E6C9]">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">📋</span> About Anti-Ragging Committee
-              </h3>
-              <p className="text-gray-700 text-sm">
-                The Anti-Ragging Committee is constituted to prevent and address any instances of ragging 
-                in the institution. Our mission is to maintain a safe, respectful, and conducive learning 
-                environment for all students.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">⏰</span> Committee Scope
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Purpose:</span>
-                  <span className="font-medium">Prevent Ragging Incidents</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Composition:</span>
-                  <span className="font-medium">Multi-stakeholder Team</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Response:</span>
-                  <span className="font-medium text-[#0bc22d]">Immediate Action</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Committee Members Table */}
@@ -308,19 +270,6 @@ export default function AntiRaggingPage() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Footer Note */}
-        <div className="bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-xl p-6 border border-[#F39C12]/20">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="text-2xl">💡</span>
-            <h3 className="font-bold text-gray-800">Important Note</h3>
-          </div>
-          <p className="text-gray-700">
-            Ragging is strictly prohibited and punishable by law. Any incidents of ragging should be 
-            immediately reported to the committee members. All complaints will be treated with strict 
-            confidentiality and appropriate action will be taken as per UGC regulations.
-          </p>
         </div>
       </div>
     </main>

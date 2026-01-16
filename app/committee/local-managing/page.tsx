@@ -50,10 +50,7 @@ export default function LocalManagingCommitteePage() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-100 to-orange-100 flex items-center justify-center">
-              <span className="text-3xl">🏛️</span>
-            </div>
+          <div className="inline-flex items-center gap-3 mb-4 pt-3">
             <h1 className="text-3xl md:text-4xl font-bold text-[#0F2A44]">
               Local Managing Committee
             </h1>
@@ -61,41 +58,6 @@ export default function LocalManagingCommitteePage() {
           <p className="text-gray-600 max-w-3xl mx-auto">
             Governing body responsible for the administration and management of the institution
           </p>
-        </div>
-
-        {/* Committee Information Card */}
-        <div className="bg-gradient-to-r from-green-50 to-orange-50 rounded-xl p-6 mb-8 border border-green-100">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">📋</span> About the Committee
-              </h3>
-              <p className="text-gray-700 text-sm">
-                The Local Managing Committee oversees the overall administration, strategic planning, 
-                and governance of the institution. It includes representatives from the trust, teaching 
-                staff, non-teaching staff, and the principal.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">🎯</span> Key Responsibilities
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-gray-600">Strategic planning and decision making</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-gray-600">Financial oversight and budget approval</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-gray-600">Policy formulation and implementation</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Committee Members Table */}
@@ -304,20 +266,6 @@ export default function LocalManagingCommitteePage() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Footer Note */}
-        <div className="bg-gradient-to-r from-green-50 to-orange-50 rounded-xl p-6 border border-green-200">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="text-2xl">💡</span>
-            <h3 className="font-bold text-gray-800">Committee Structure</h3>
-          </div>
-          <p className="text-gray-700">
-            The Local Managing Committee comprises diverse stakeholders including trust members, 
-            teaching staff, non-teaching staff, and the principal. This structure ensures comprehensive 
-            decision-making and effective governance of the institution. Regular meetings are conducted 
-            to review progress and make strategic decisions.
-          </p>
         </div>
       </div>
     </main>

@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-// Teaching Staff Data extracted from the PDF
+// Teaching Staff Data with better generic images
 const teachingStaffData = [
   {
     id: 1,
@@ -14,7 +14,7 @@ const teachingStaffData = [
     experience: "15+ Years",
     specialization: "Kinesiotherapy & Physical Diagnosis",
     email: "principal@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#2de86c]",
     subjects: ["Kinesiotherapy", "Physical Diagnosis"],
     achievements: ["College Principal", "Expert in Kinesiotherapy", "Academic Administrator"]
@@ -27,7 +27,7 @@ const teachingStaffData = [
     experience: "12+ Years",
     specialization: "Electrotherapy & Electrodiagnosis",
     email: "jeyaganesh.v@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#f8c054]",
     subjects: ["Electrotherapy", "Electrodiagnosis"],
     achievements: ["Specialist in Electrotherapy", "Clinical Expert", "Research Publications"]
@@ -40,7 +40,7 @@ const teachingStaffData = [
     experience: "8+ Years",
     specialization: "Electrotherapy & Electrodiagnosis",
     email: "neha.pilankar@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1594824434340-7e7dfc37cabb?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#4af48c]",
     subjects: ["Electrotherapy", "Electrodiagnosis"],
     achievements: ["Electrotherapy Specialist", "Clinical Trainer", "Student Mentor"]
@@ -53,7 +53,7 @@ const teachingStaffData = [
     experience: "7+ Years",
     specialization: "Electrotherapy & Electrodiagnosis",
     email: "sayali.yadav@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#ffb347]",
     subjects: ["Electrotherapy", "Electrodiagnosis"],
     achievements: ["Clinical Expert", "Research Contributor", "Workshop Facilitator"]
@@ -66,7 +66,7 @@ const teachingStaffData = [
     experience: "10+ Years",
     specialization: "Kinesiotherapy & Physical Diagnosis",
     email: "n.mangeshran@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#7ef9a5]",
     subjects: ["Kinesiotherapy", "Physical Diagnosis"],
     achievements: ["Kinesiotherapy Expert", "Clinical Assessment Specialist", "Academic Researcher"]
@@ -79,7 +79,7 @@ const teachingStaffData = [
     experience: "6+ Years",
     specialization: "Kinesiotherapy & Physical Diagnosis",
     email: "anukshaya.moolya@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#ffcc80]",
     subjects: ["Kinesiotherapy", "Physical Diagnosis"],
     achievements: ["Physical Diagnosis Expert", "Clinical Educator", "Research Contributor"]
@@ -92,7 +92,7 @@ const teachingStaffData = [
     experience: "5+ Years",
     specialization: "Kinesiotherapy & Physical Diagnosis",
     email: "arpita.mehta@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#a5f7c3]",
     subjects: ["Kinesiotherapy", "Physical Diagnosis"],
     achievements: ["Clinical Specialist", "Student Mentor", "Workshop Coordinator"]
@@ -105,7 +105,7 @@ const teachingStaffData = [
     experience: "18+ Years",
     specialization: "Musculoskeletal PT",
     email: "parag.kulkarni@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#ffe0b3]",
     subjects: ["Musculoskeletal Physiotherapy"],
     achievements: ["Senior Professor", "Musculoskeletal Specialist", "Research Lead"]
@@ -118,7 +118,7 @@ const teachingStaffData = [
     experience: "12+ Years",
     specialization: "Musculoskeletal PT",
     email: "leena.zore@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#0af56e]",
     subjects: ["Musculoskeletal Physiotherapy"],
     achievements: ["Musculoskeletal Expert", "Clinical Supervisor", "Academic Contributor"]
@@ -131,7 +131,7 @@ const teachingStaffData = [
     experience: "7+ Years",
     specialization: "Musculoskeletal PT",
     email: "anupama.pathak@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#ffd699]",
     subjects: ["Musculoskeletal Physiotherapy"],
     achievements: ["Musculoskeletal Specialist", "Clinical Educator", "Research Assistant"]
@@ -144,7 +144,7 @@ const teachingStaffData = [
     experience: "20+ Years",
     specialization: "Neuro PT",
     email: "gundu.janaki@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#2de86c]",
     subjects: ["Neuro Physiotherapy"],
     achievements: ["Senior Neurological Specialist", "Department Head", "International Publications"]
@@ -157,7 +157,7 @@ const teachingStaffData = [
     experience: "11+ Years",
     specialization: "Neuro PT",
     email: "ruchi.gupta@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#f8c054]",
     subjects: ["Neuro Physiotherapy"],
     achievements: ["Neurological Rehabilitation Expert", "Clinical Researcher", "Academic Mentor"]
@@ -170,7 +170,7 @@ const teachingStaffData = [
     experience: "6+ Years",
     specialization: "Neuro PT",
     email: "anjali.perdeshi@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#4af48c]",
     subjects: ["Neuro Physiotherapy"],
     achievements: ["Neuro Rehabilitation Specialist", "Clinical Trainer", "Research Contributor"]
@@ -183,7 +183,7 @@ const teachingStaffData = [
     experience: "5+ Years",
     specialization: "Community PT",
     email: "abhilasha.jain@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#ffb347]",
     subjects: ["Community Physiotherapy"],
     achievements: ["Community Health Specialist", "Public Health Educator", "Field Coordinator"]
@@ -196,7 +196,7 @@ const teachingStaffData = [
     experience: "16+ Years",
     specialization: "Cardiovascular & Respiratory PT",
     email: "mayuri.ghumatkar@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#7ef9a5]",
     subjects: ["Cardiovascular PT", "Respiratory PT"],
     achievements: ["Cardiorespiratory Specialist", "Department Head", "Research Publications"]
@@ -209,7 +209,7 @@ const teachingStaffData = [
     experience: "13+ Years",
     specialization: "Cardiovascular & Respiratory PT",
     email: "venkatash.goud@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop&crop=face",
     color: "from-[#F39C12] to-[#ffcc80]",
     subjects: ["Cardiovascular PT", "Respiratory PT"],
     achievements: ["Cardiorespiratory Expert", "Clinical Supervisor", "Academic Researcher"]
@@ -222,7 +222,7 @@ const teachingStaffData = [
     experience: "4+ Years",
     specialization: "Cardiovascular & Respiratory PT",
     email: "akshaya.iyer@brharnecollege.edu.in",
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
     color: "from-[#0bc22d] to-[#a5f7c3]",
     subjects: ["Cardiovascular PT", "Respiratory PT"],
     achievements: ["Cardiorespiratory Specialist", "Clinical Educator", "Research Assistant"]
@@ -248,7 +248,26 @@ export default function TeachingStaffPage() {
     let filtered = teachingStaffData;
     
     // Filter by category
+    if (activeCategory !== 'all') {
+      filtered = filtered.filter(faculty => 
+        faculty.specialization.toLowerCase().includes(activeCategory.toLowerCase()) ||
+        faculty.subjects.some(subject => 
+          subject.toLowerCase().includes(activeCategory.toLowerCase())
+        )
+      );
+    }
     
+    // Filter by search query
+    if (searchQuery.trim() !== '') {
+      filtered = filtered.filter(faculty =>
+        faculty.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        faculty.designation.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        faculty.specialization.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        faculty.subjects.some(subject => 
+          subject.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      );
+    }
     
     setFilteredFaculty(filtered);
   }, [activeCategory, searchQuery]);
@@ -349,10 +368,10 @@ export default function TeachingStaffPage() {
                       hoveredCard === faculty.id ? 'shadow-2xl ring-2 ring-[#0bc22d] ring-opacity-50' : 'hover:shadow-2xl'
                     }`}>
                       {/* Faculty Image Header - Reduced Height */}
-                      <div className="h-40 bg-gray-100 relative overflow-hidden">
+                      <div className="h-50 bg-gradient-to-r from-gray-100 to-gray-200 relative overflow-hidden">
                         {imageErrors[faculty.id] ? (
-                          <div className="w-full h-full flex items-center justify-center">
-                            <div className="text-5xl text-gray-400">👨‍⚕️</div>
+                          <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-[#0bc22d] to-[#F39C12]">
+                            <div className="text-5xl text-white">👨‍⚕️</div>
                           </div>
                         ) : (
                           <img
@@ -378,7 +397,7 @@ export default function TeachingStaffPage() {
 
                       {/* Faculty Info - Reduced Padding */}
                       <div className="p-5 text-center">
-                        <h3 className="text-lg font-bold text-gray-800 mb-1 group-hover:text-[#0bc22d] transition-colors">
+                        <h3 className="text-lg font-bold text-gray-800 mb-1 transition-colors">
                           {faculty.name}
                         </h3>
                         
@@ -388,16 +407,8 @@ export default function TeachingStaffPage() {
 
                         {/* Specialization - Smaller */}
                         <div className="mb-3">
-                          <div className="text-xs text-gray-500 mb-1">Specialization</div>
-                          <div className="text-sm font-medium text-gray-700 line-clamp-2">{faculty.specialization}</div>
-                        </div>
-
-                        {/* Experience - Smaller */}
-                        <div className="mb-4">
-                          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 px-3 py-1.5 rounded-full">
-                            <span className="text-[#F39C12] text-sm">⭐</span>
-                            <span className="text-xs font-medium">{faculty.experience} Experience</span>
-                          </div>
+                          <div className="text-xs text-gray-800 mb-1">Specialization</div>
+                          <div className="text-sm font-medium text-gray-950 line-clamp-2">{faculty.specialization}</div>
                         </div> 
                       </div>
                     </div>
@@ -407,64 +418,7 @@ export default function TeachingStaffPage() {
             </>
           )}
         </div>
-
-        {/* Department Overview */}
-        <div className="bg-white rounded-3xl shadow-2xl p-10 mb-16 border border-gray-100">
-          <div className="flex flex-col lg:flex-row items-center gap-10">
-            <div className="lg:w-2/5">
-              <div className="bg-gradient-to-br from-[#0bc22d] to-[#F39C12] rounded-2xl p-8 text-white text-center">
-                <div className="text-6xl mb-6">🎓</div>
-                <h3 className="text-2xl font-bold mb-4">Faculty Excellence</h3>
-                <p className="text-white/90">
-                  Our faculty members are the cornerstone of our educational excellence
-                </p>
-              </div>
-            </div>
-            
-            <div className="lg:w-3/5">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                About Our Teaching Staff
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  {
-                    icon: "👨‍🏫",
-                    title: "Qualified Educators",
-                    description: "All faculty members hold postgraduate degrees with specialized training"
-                  },
-                  {
-                    icon: "🔬",
-                    title: "Active Researchers",
-                    description: "Engaged in cutting-edge research with numerous publications"
-                  },
-                  {
-                    icon: "🏥",
-                    title: "Clinical Experts",
-                    description: "Extensive clinical experience in various physiotherapy specialties"
-                  },
-                  {
-                    icon: "🌍",
-                    title: "Global Exposure",
-                    description: "International collaborations and conference participation"
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="bg-gradient-to-r from-gray-50 to-white rounded-xl p-5 hover:bg-gradient-to-r hover:from-[#0bc22d]/5 hover:to-[#F39C12]/5 transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-[#0bc22d]/20">
-                    <div className="flex items-center gap-4">
-                      <div className={`text-3xl ${index % 2 === 0 ? 'text-[#0bc22d]' : 'text-[#F39C12]'}`}>{item.icon}</div>
-                      <div>
-                        <h4 className="font-bold text-gray-800 mb-1">{item.title}</h4>
-                        <p className="text-sm text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
-
 
       {/* Faculty Detail Modal */}
       {isModalOpen && selectedFaculty && (
@@ -476,34 +430,22 @@ export default function TeachingStaffPage() {
             className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Header */}
-            <div className="h-48 bg-gray-100 relative overflow-hidden">
+            {/* Modal Header - Simplified without background image */}
+            <div className="relative pt-8">
+              {/* Close Button */}
               <button
                 onClick={closeFacultyModal}
-                className="absolute top-6 right-6 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors z-10"
+                className="absolute top-8 right-8 bg-transparent text-gray-800 hover:text-[#0bc22d] p-3 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg z-10"
               >
                 <span className="text-2xl">✕</span>
               </button>
               
-              {imageErrors[selectedFaculty.id] ? (
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-8xl text-gray-400">👨‍⚕️</div>
-                </div>
-              ) : (
-                <img
-                  src={selectedFaculty.image}
-                  alt={selectedFaculty.name}
-                  className="w-full h-full object-cover"
-                  onError={() => handleImageError(selectedFaculty.id)}
-                />
-              )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              
-              <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
-                <div className="w-32 h-32 bg-white rounded-full border-4 border-white overflow-hidden shadow-2xl">
+              {/* Large Profile Image Circle - Increased size */}
+              <div className="flex justify-center">
+                <div className="w-60 h-60 bg-gradient-to-r from-[#0bc22d] to-[#F39C12] rounded-full border-8 border-white overflow-hidden shadow-2xl">
                   {imageErrors[selectedFaculty.id] ? (
-                    <div className="w-full h-full bg-gradient-to-br from-[#0bc22d] to-[#F39C12] flex items-center justify-center">
-                      <span className="text-4xl text-white">👨‍⚕️</span>
+                    <div className="w-full h-full bg-gradient-to-r from-[#0bc22d] to-[#F39C12] flex items-center justify-center">
+                      <span className="text-6xl text-white">👨‍⚕️</span>
                     </div>
                   ) : (
                     <img
@@ -518,7 +460,7 @@ export default function TeachingStaffPage() {
             </div>
 
             {/* Modal Content */}
-            <div className="pt-20 px-8 pb-8">
+            <div className="pt-10 px-8 pb-8">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">{selectedFaculty.name}</h2>
                 <div className="space-y-1">

@@ -246,46 +246,55 @@ function InstitutionDetailsSection() {
                 </div>
               </div>
 
-              <div className="pt-2">
-                <h2 className="text-xs sm:text-sm font-bold text-[#044614] mb-1.5">Follow Us:</h2>
-                <div className="flex gap-2">
-                  <a href="https://www.facebook.com/brhcop/" target="_blank" rel="noopener noreferrer">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.406.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.676V1.325C24 .593 23.406 0 22.675 0z"/>
-                    </svg>
-                  </a>
+              {/*follow us:*/}
+<div className="pt-2">
+  <div className="flex items-center">
+    {/* "Follow Us:" text */}
+    <h2 className="text-xs sm:text-sm font-bold text-[#044614] whitespace-nowrap">Follow Us:</h2>
+    
+    {/* Icons - directly adjacent */}
+    <div className="flex gap-1 ml-2">
+      {/* Facebook */}
+      <a href="https://www.facebook.com/brhcop/" target="_blank" rel="noopener noreferrer" className="group">
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-900 transition-all duration-300">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.406.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.676V1.325C24 .593 23.406 0 22.675 0z"/>
+          </svg>
+        </div>
+      </a>
 
-                  <a href="https://www.google.com/search?q=B.+R.+Harne+College+of+Pharmacy" target="_blank" rel="noopener noreferrer" aria-label="Google">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 533.5 544.3">
-                      <path fill="#4285F4" d="M533.5 278.4c0-17.4-1.4-34.1-4.1-50.3H272v95h146.9c-6.3 34-25.1 62.8-53.6 82v68h86.4c50.5-46.5 79.8-115.1 79.8-194.7z"/>
-                      <path fill="#34A853" d="M272 544.3c72.6 0 133.5-24.1 178-65.5l-86.4-68c-23.9 16-54.5 25.4-91.6 25.4-70.5 0-130-47.7-151.4-111.3H32.5v69.9c44.1 87.5 134.6 150.5 239.5 150.5z"/>
-                      <path fill="#FBBC05" d="M120.5 319.1c-10.7-32-10.7-66.8 0-98.8v-69.9H32.5c-39.5 78.8-39.5 172.4 0 251.2l88-82.5z"/>
-                      <path fill="#EA4335" d="M272 107.1c38.5-.6 73.1 13.2 100.5 39.1l75.3-75.3C406.5 24.7 344.6-.4 272 0 167.1 0 76.6 63 32.5 150.5l88 69.9C142 154.8 201.5 107.1 272 107.1z"/>
-                    </svg>
-                  </a>
+      {/* Google */}
+      <a href="https://www.google.com/search?q=B.+R.+Harne+College+of+Pharmacy" target="_blank" rel="noopener noreferrer" aria-label="Google" className="group">
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center  hover:bg-gray-100  transition-all duration-300 border border-gray-300">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4" viewBox="0 0 533.5 544.3">
+            <path fill="#4285F4" d="M533.5 278.4c0-17.4-1.4-34.1-4.1-50.3H272v95h146.9c-6.3 34-25.1 62.8-53.6 82v68h86.4c50.5-46.5 79.8-115.1 79.8-194.7z"/>
+            <path fill="#34A853" d="M272 544.3c72.6 0 133.5-24.1 178-65.5l-86.4-68c-23.9 16-54.5 25.4-91.6 25.4-70.5 0-130-47.7-151.4-111.3H32.5v69.9c44.1 87.5 134.6 150.5 239.5 150.5z"/>
+            <path fill="#FBBC05" d="M120.5 319.1c-10.7-32-10.7-66.8 0-98.8v-69.9H32.5c-39.5 78.8-39.5 172.4 0 251.2l88-82.5z"/>
+            <path fill="#EA4335" d="M272 107.1c38.5-.6 73.1 13.2 100.5 39.1l75.3-75.3C406.5 24.7 344.6-.4 272 0 167.1 0 76.6 63 32.5 150.5l88 69.9C142 154.8 201.5 107.1 272 107.1z"/>
+          </svg>
+        </div>
+      </a>
 
-                  <a href="https://www.instagram.com/brharnecollegeofpharmacy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 512 512">
-                      <linearGradient id="insta-gradient" x1="0" x2="1" y1="0" y2="1">
-                        <stop offset="0%" stopColor="#feda75"/>
-                        <stop offset="25%" stopColor="#fa7e1e"/>
-                        <stop offset="50%" stopColor="#d62976"/>
-                        <stop offset="75%" stopColor="#962fbf"/>
-                        <stop offset="100%" stopColor="#4f5bd5"/>
-                      </linearGradient>
-                      <path fill="url(#insta-gradient)" d="M349.33 69.33H162.67C111.41 69.33 69.33 111.41 69.33 162.67v186.67c0 51.26 42.08 93.34 93.34 93.34h186.66c51.26 0 93.34-42.08 93.34-93.34V162.67c0-51.26-42.08-93.34-93.34-93.34zm61.33 280c0 33.92-27.41 61.33-61.33 61.33H162.67c-33.92 0-61.33-27.41-61.33-61.33V162.67c0-33.92 27.41-61.33 61.33-61.33h186.66c33.92 0 61.33 27.41 61.33 61.33v186.66z"/>
-                      <circle cx="256" cy="256" r="80" fill="url(#insta-gradient)"/>
-                      <circle cx="390" cy="122" r="20" fill="url(#insta-gradient)"/>
-                    </svg>
-                  </a>
+      {/* Instagram */}
+      <a href="https://www.instagram.com/brharnecollegeofpharmacy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="group">
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center hover:opacity-90 transition-all duration-300">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </div>
+      </a>
 
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
+      {/* LinkedIn */}
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="group">
+        <div className="w-8 h-8 sm:w-8 sm:h-8 rounded-full bg-blue-700 flex items-center justify-center  hover:bg-blue-900  transition-all duration-300">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -782,12 +791,55 @@ export default function HomePage() {
 
 {/* UPDATED UPCOMING EVENTS SECTION - Mobile Stacked, Desktop Carousel */}
 <FadeIn delay={400} direction="left">
-  <div className="mb-5 sm:mb-5">
+  <div className="mb-5 sm:mb-20">
     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 sm:mb-5 gap-3 sm:gap-4">
       <div>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e5c36] mb-1 sm:mb-2 group-hover:text-[#0bc22d] transition-colors duration-500">Upcoming Events</h2>
         <p className="text-gray-800 text-sm sm:text-base group-hover:text-gray-900 transition-colors duration-500">Stay updated with our latest campus activities</p>
       </div>
+
+         {/* Indicators */}
+     <div className="flex justify-end gap-2 mb-1">
+  {/* Minimal Left Arrow */}
+  <button
+    onClick={() => {
+      setIsAutoRotating(false);
+      setCurrentEventIndex((prev) => prev === 0 ? upcomingEvents.length - 1 : prev - 1);
+      setTimeout(() => setIsAutoRotating(true), 10000);
+    }}
+    className="w-8 h-8 rounded-full bg-transparent hover:bg-gray-100 transition-all duration-300 flex items-center justify-center group"
+    aria-label="Previous event"
+  >
+    <svg 
+      className="w-5 h-5 text-gray-500 group-hover:text-[#0bc22d] transition-colors duration-300" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+  
+  {/* Minimal Right Arrow */}
+  <button
+    onClick={() => {
+      setIsAutoRotating(false);
+      setCurrentEventIndex((prev) => (prev + 1) % upcomingEvents.length);
+      setTimeout(() => setIsAutoRotating(true), 10000);
+    }}
+    className="w-8 h-8 rounded-full bg-transparent hover:bg-gray-100 transition-all duration-300 flex items-center justify-center group"
+    aria-label="Next event"
+  >
+    <svg 
+      className="w-5 h-5 text-gray-500 group-hover:text-[#0bc22d] transition-colors duration-300" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</div>
     </div>
     
     {/* Mobile: Stacked Events */}
@@ -876,24 +928,6 @@ export default function HomePage() {
     
     {/* Desktop: Carousel */}
     <div className="hidden sm:block">
-      {/* Indicators */}
-      <div className="flex justify-center gap-2 mb-6">
-        {upcomingEvents.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => {
-              setIsAutoRotating(false);
-              setCurrentEventIndex(idx);
-              setTimeout(() => setIsAutoRotating(true), 10000);
-            }}
-            className={`w-1 h-1 sm:w-2 sm:h-2 rounded-full transition-all duration-300 hover:scale-125 ${
-              currentEventIndex === idx 
-                ? 'bg-[#0bc22d] scale-125' 
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          ></button>
-        ))}
-      </div>
 
       <div className="relative overflow-hidden rounded-xl">
         {/* Events Container with sliding animation */}
@@ -954,57 +988,56 @@ export default function HomePage() {
                 </div>
                 
                 {/* Event Content with slide-up animation */}
-                <div className="p-4 sm:p-5 transform group-hover:translate-y-[-5px] transition-transform duration-300">
+                <div className="p-4 sm:p-2 transform group-hover:translate-y-[-5px] transition-transform duration-300">
                   {/* Event Title with gradient text on hover */}
-                  <h3 className="text-lg sm:text-xl font-bold text-[#071b2d] mb-3 group-hover:bg-gradient-to-r group-hover:from-[#0bc22d] group-hover:to-[#F39C12] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 line-clamp-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#071b2d] mb-3 transition-all duration-500 line-clamp-2">
                     {event.title}
                   </h3>
-
-                  {/* Event Details Grid with staggered animations */}
-                  <div className="space-y-2 mb-3">
-                    {/* Date with fade-in animation */}
-                    <div className="flex items-center gap-3 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 transform group-hover:translate-x-1">
-                      <div className="relative">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-100 to-blue-50 flex items-center justify-center ">
-                          <span className="text-blue-600">📅</span>
-                        </div>
-                        <div className="absolute -inset-1 bg-blue-200/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-medium group-hover:text-blue-600 transition-colors duration-300">{event.date}</div>
-                      </div>
-                    </div>
-                    
-                    {/* Location with fade-in animation */}
-                    <div className="flex items-center gap-3 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 transform group-hover:translate-x-1" style={{ transitionDelay: '50ms' }}>
-                      <div className="relative">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-100 to-green-50 flex items-center justify-center">
-                          <span className="text-green-600">📍</span>
-                        </div>
-                        <div className="absolute -inset-1 bg-green-200/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-medium group-hover:text-green-600 transition-colors duration-300">{event.location}</div>
-                      </div>
-                    </div>
-                    
-                    {/* Time with fade-in animation */}
-                    <div className="flex items-center gap-3 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 transform group-hover:translate-x-1" style={{ transitionDelay: '100ms' }}>
-                      <div className="relative">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-amber-100 to-amber-50 flex items-center justify-center">
-                          <span className="text-amber-600">🕒</span>
-                        </div>
-                        <div className="absolute -inset-1 bg-amber-200/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-medium group-hover:text-amber-600 transition-colors duration-300">
-                          {event.id === 9 ? "10:00 AM - 4:00 PM" : 
-                           event.id === 10 ? "10:00 AM - 12:00 PM" : 
-                           "9:00 AM - 5:00 PM"}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+{/* Event Details Grid with staggered animations */}
+<div className="space-y-0.5 mb-2"> {/* Reduced from space-y-1 to space-y-0.5 */}
+  {/* Date with fade-in animation */}
+  <div className="flex items-center gap-1 text-sm text-gray-600 transition-colors duration-300 transform group-hover:translate-x-1">
+    <div className="relative">
+      <div className="w-8 h-8 rounded-full bg-transparent flex items-center justify-center ">
+        <span className="text-blue-600">📅</span>
+      </div>
+      <div className="absolute -inset-1 bg-blue-200/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </div>
+    <div className="flex-1">
+      <div className="font-medium transition-colors duration-300">{event.date}</div>
+    </div>
+  </div>
+  
+  {/* Location with fade-in animation */}
+  <div className="flex items-center gap-1 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 transform group-hover:translate-x-1" style={{ transitionDelay: '50ms' }}>
+    <div className="relative">
+      <div className="w-8 h-8 rounded-full bg-transparent flex items-center justify-center">
+        <span className="text-green-600">📍</span>
+      </div>
+      <div className="absolute -inset-1 bg-green-200/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </div>
+    <div className="flex-1">
+      <div className="font-medium transition-colors duration-300">{event.location}</div>
+    </div>
+  </div>
+  
+  {/* Time with fade-in animation */}
+  <div className="flex items-center gap-1 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300 transform group-hover:translate-x-1" style={{ transitionDelay: '100ms' }}>
+    <div className="relative">
+      <div className="w-8 h-8 rounded-full bg-transparent flex items-center justify-center">
+        <span className="text-amber-600">🕒</span>
+      </div>
+      <div className="absolute -inset-1 bg-amber-200/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </div>
+    <div className="flex-1">
+      <div className="font-medium transition-colors duration-300">
+        {event.id === 9 ? "10:00 AM - 4:00 PM" : 
+         event.id === 10 ? "10:00 AM - 12:00 PM" : 
+         "9:00 AM - 5:00 PM"}
+      </div>
+    </div>
+  </div>
+</div>
                   
                   {/* View Details Button with glow effect */}
                   <div className="border-t border-gray-100 pt-2 mt-1">
@@ -1031,11 +1064,11 @@ export default function HomePage() {
 
 {/* Highlighted Events Section */}
 <FadeIn delay={200} direction="right">
-  <div className="mb-8 sm:mb-16">
-    <div className="mb-4 sm:mb-8">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e5c36] mb-1 sm:mb-2 group-hover:text-[#0bc22d] transition-colors duration-500">Highlighted Events</h2>
-      <p className="text-gray-800 text-sm sm:text-base group-hover:text-gray-900 transition-colors duration-500">Featured campus activities and achievements</p>
-    </div>
+  <div className="mb-20 sm:20">
+    <div className="mb-8 sm:mb-8">
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0e5c36] mb-1 sm:mb-2 group-hover:text-[#0bc22d] transition-colors duration-500">Highlighted Events</h2>
+  <p className="text-gray-800 text-sm sm:text-base group-hover:text-gray-900 transition-colors duration-500">Featured campus activities and achievements</p>
+</div>
     
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
       {highlightedEvents.map((event) => (
@@ -1074,17 +1107,17 @@ export default function HomePage() {
           </div>
           
           {/* Event Content - Increased padding */}
-          <div className="p-3 sm:p-3">
+          <div className="p-3 sm:p-1">
             {/* Event Title */}
             <h3 className="text-lg sm:text-xl font-bold text-[#071b2d] mb-2 sm:mb-3 group-hover:text-[#f1b510] transition-colors duration-300 line-clamp-2">
               {event.title}
             </h3>
 
            {/* Event Details Grid */}
-            <div className="space-y-1 mb-1">
+            <div className="space-y-0.5 mb-2">
               {/* Date */}
               <div className="flex items-center gap-2 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-100 transition-all duration-300">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-transparent flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                   <span className="text-blue-600">📅</span>
                 </div>
                 <div>
@@ -1094,7 +1127,7 @@ export default function HomePage() {
               
               {/* Location */}
               <div className="flex items-center gap-2 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-50 flex items-center justify-center group-hover:scale-110 group-hover:bg-green-100 transition-all duration-300">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-transparent flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                   <span className="text-green-600">📍</span>
                 </div>
                 <div>
@@ -1104,7 +1137,7 @@ export default function HomePage() {
               
               {/* Time - Additional time display */}
               <div className="flex items-center gap-2 text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-50 flex items-center justify-center group-hover:scale-110 group-hover:bg-amber-100 transition-all duration-300">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-transparent flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                   <span className="text-amber-600">🕒</span>
                 </div>
                 <div>
@@ -1207,9 +1240,8 @@ export default function HomePage() {
             </div>
           </div>
         </FadeIn>
-
 {/* Other Institutes Section */}
-        <FadeIn delay={300}>
+<FadeIn delay={300}>
   <div className="mb-12 sm:mb-16">
     <div className="text-center mb-6 sm:mb-10">
       <h2 className="text-2xl sm:text-3xl font-bold text-[#0F2A44] mb-2 sm:mb-4">Other Institutes</h2>
@@ -1218,65 +1250,77 @@ export default function HomePage() {
       </p>
     </div>
     
-    {/* Grid of 6 Institutes - Mobile: 2 columns, Desktop: 6 columns */}
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-      {/* Engineering Card */}
-      <div className="group relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg sm:rounded-xl p-3 sm:p-6 shadow-lg border border-orange-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-        <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-orange-200 to-orange-300 opacity-20 rounded-full -translate-y-8 sm:-translate-y-12 translate-x-8 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
-        <div className="relative z-10">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3">
-            <img className='object-contain w-full h-full' src="/engg.png" alt="/engg.png" />
+    {/* Grid of 6 Institutes - Centered with fixed width */}
+    <div className="flex justify-center">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        {/* Engineering Card */}
+        <div className="group relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-orange-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center h-full min-h-[180px] sm:min-h-[220px]">
+          <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-orange-200 to-orange-300 opacity-20 rounded-full -translate-y-10 sm:-translate-y-12 translate-x-10 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+          <div className="relative z-10 w-full flex flex-col items-center justify-center h-full">
+            {/* Logo - SIGNIFICANTLY increased size */}
+            <div className="w-24 h-24 sm:w-45 sm:h-45 mx-auto mb-4 flex items-center justify-center">
+              <img className='object-contain w-full h-full p-1' src="/engg (2).png" alt="Engineering" />
+            </div>
+            {/* Institute Name - Smaller text, one line */}
+            <h3 className="text-center text-sm sm:text-base font-bold text-[#0F2A44] mb-1 line-clamp-1 w-full">Engineering</h3>
+            <p className="text-center text-xs sm:text-sm text-gray-700 line-clamp-1 w-full">B. R. Harne College</p>
           </div>
-          <h3 className="text-center text-sm sm:text-lg font-bold text-[#0F2A44] mb-1">Engineering</h3>
-          <p className="text-center text-xs sm:text-sm text-gray-700 hidden sm:block">B. R. Harne College of Engineering and Technology</p>
         </div>
-      </div>
-      
-      {/* Pharmacy Card */}
-      <div className="group relative bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg sm:rounded-xl p-3 sm:p-6 shadow-lg border border-emerald-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-        <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-emerald-200 to-green-300 opacity-20 rounded-full -translate-y-8 sm:-translate-y-12 translate-x-8 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
-        <div className="relative z-10">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3">
-            <img className='object-contain w-full h-full' src="/pharmacy.png" alt="/pharmacy.png" />
+        
+        {/* Pharmacy Card */}
+        <div className="group relative bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-emerald-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center h-full min-h-[180px] sm:min-h-[220px]">
+          <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-emerald-200 to-green-300 opacity-20 rounded-full -translate-y-10 sm:-translate-y-12 translate-x-10 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+          <div className="relative z-10 w-full flex flex-col items-center justify-center h-full">
+            {/* Logo - SIGNIFICANTLY increased size */}
+            <div className="w-24 h-24 sm:w-42 sm:h-42 mx-auto mb-4 flex items-center justify-center">
+              <img className='object-contain w-full h-full p-1' src="/pharmacy.png" alt="Pharmacy" />
+            </div>
+            {/* Institute Name - Smaller text, one line */}
+            <h3 className="text-center text-sm sm:text-base font-bold text-[#0F2A44] mb-1 line-clamp-1 w-full">Pharmacy</h3>
+            <p className="text-center text-xs sm:text-sm text-gray-700 line-clamp-1 w-full">B. R. Harne College</p>
           </div>
-          <h3 className="text-center text-sm sm:text-lg font-bold text-[#0F2A44] mb-1">Pharmacy</h3>
-          <p className="text-center text-xs sm:text-sm text-gray-600 hidden sm:block">B. R. Harne College of Pharmacy</p>
         </div>
-      </div>
-      
-      {/* Architecture Card */}
-      <div className="group relative bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg sm:rounded-xl p-3 sm:p-6 shadow-lg border border-violet-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-        <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-violet-200 to-purple-300 opacity-20 rounded-full -translate-y-8 sm:-translate-y-12 translate-x-8 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
-        <div className="relative z-10">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3">
-            <img className='object-contain w-full h-full' src="/foundation.jpeg" alt="/foundation.jpeg" />
+        
+        {/* Foundation Card */}
+        <div className="group relative bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-violet-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center h-full min-h-[180px] sm:min-h-[220px]">
+          <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-violet-200 to-purple-300 opacity-20 rounded-full -translate-y-10 sm:-translate-y-12 translate-x-10 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+          <div className="relative z-10 w-full flex flex-col items-center justify-center h-full">
+            {/* Logo - SIGNIFICANTLY increased size */}
+            <div className="w-24 h-24 sm:w-42 sm:h-44 mx-auto mb-4 flex items-center justify-center">
+              <img className='object-contain w-full h-full p-1' src="/foundation-2.png" alt="Foundation" />
+            </div>
+            {/* Institute Name - Smaller text, one line */}
+            <h3 className="text-center text-sm sm:text-base font-bold text-[#190c34] mb-1 line-clamp-1 w-full">Foundation</h3>
+            <p className="text-center text-xs sm:text-sm text-gray-700 line-clamp-1 w-full">Jai Shri Siddhivinayak</p>
           </div>
-          <h3 className="text-center text-sm sm:text-lg font-bold text-[#190c34] mb-1">Foundation</h3>
-          <p className="text-center text-xs sm:text-sm text-gray-600 hidden sm:block">Jai Shri Siddhivinayak Foundation's</p>
         </div>
-      </div>
-      
-      {/* Ayurvedic Card */}
-      <div className="group relative bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg sm:rounded-xl p-3 sm:p-6 shadow-lg border border-amber-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-        <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-amber-200 to-yellow-300 opacity-20 rounded-full -translate-y-8 sm:-translate-y-12 translate-x-8 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
-        <div className="relative z-10">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3">
-            <img className='object-contain w-full h-full' src="/ayurvedic.png" alt="/ayurvedic.png" />
+        
+        {/* Ayurvedic Card */}
+        <div className="group relative bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-amber-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center h-full min-h-[180px] sm:min-h-[220px]">
+          <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-amber-200 to-yellow-300 opacity-20 rounded-full -translate-y-10 sm:-translate-y-12 translate-x-10 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+          <div className="relative z-10 w-full flex flex-col items-center justify-center h-full">
+            {/* Logo - SIGNIFICANTLY increased size */}
+            <div className="w-24 h-24 sm:w-42 sm:h-42 mx-auto mb-4 flex items-center justify-center">
+              <img className='object-contain w-full h-full p-1' src="/ayurvedic.png" alt="Ayurvedic" />
+            </div>
+            {/* Institute Name - Smaller text, one line */}
+            <h3 className="text-center text-sm sm:text-base font-bold text-[#0F2A44] mb-1 line-clamp-1 w-full">Ayurvedic</h3>
+            <p className="text-center text-xs sm:text-sm text-gray-700 line-clamp-1 w-full">Ayurvedic Medical College</p>
           </div>
-          <h3 className="text-center text-sm sm:text-lg font-bold text-[#0F2A44] mb-1">Ayurvedic</h3>
-          <p className="text-center text-xs sm:text-sm text-gray-600 hidden sm:block">Ayurvedic Medical College</p>
         </div>
-      </div>
-      
-      {/* Nursing Card */}
-      <div className="group relative bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg sm:rounded-xl p-3 sm:p-6 shadow-lg border border-rose-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-        <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-rose-200 to-pink-300 opacity-20 rounded-full -translate-y-8 sm:-translate-y-12 translate-x-8 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
-        <div className="relative z-10">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3">
-            <img className='object-contain w-full h-full' src="/nursing.jpg" alt="/nursing.jpg" />
+        
+        {/* Nursing Card */}
+        <div className="group relative bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg border border-rose-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center h-full min-h-[180px] sm:min-h-[220px]">
+          <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-rose-200 to-pink-300 opacity-20 rounded-full -translate-y-10 sm:-translate-y-12 translate-x-10 sm:translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+          <div className="relative z-10 w-full flex flex-col items-center justify-center h-full">
+            {/* Logo - SIGNIFICANTLY increased size */}
+            <div className="w-24 h-24 sm:w-42 sm:h-44 mx-auto mb-4 flex items-center justify-center">
+              <img className='object-contain w-full h-full p-1' src="/nursing-2.jpg" alt="Nursing" />
+            </div>
+            {/* Institute Name - Smaller text, one line */}
+            <h3 className="text-center text-sm sm:text-base font-bold text-[#0F2A44] mb-1 line-clamp-1 w-full">Nursing</h3>
+            <p className="text-center text-xs sm:text-sm text-gray-700 line-clamp-1 w-full">B. R. Harne School</p>
           </div>
-          <h3 className="text-center text-sm sm:text-lg font-bold text-[#0F2A44] mb-1">Nursing</h3>
-          <p className="text-center text-xs sm:text-sm text-gray-600 hidden sm:block">B. R. Harne School of Nursing (GNN)</p>
         </div>
       </div>
     </div>

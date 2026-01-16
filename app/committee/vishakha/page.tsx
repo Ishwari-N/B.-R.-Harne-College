@@ -47,55 +47,17 @@ export default function VishakhaCommitteePage() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-100 to-orange-100 flex items-center justify-center">
-              <span className="text-3xl">⚖️</span>
-            </div>
+          <div className="inline-flex items-center gap-3 mb-4 pt-3">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-[#0F2A44]">
                 VISHAKHA
               </h1>
-              <p className="text-lg text-gray-600 mt-1">
+              <p className="text-lg text-gray-600 mt-0">
                 (Sexual Harassment Redressal Committee)
               </p>
-            </div>
-          </div>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+              <p className="text-gray-600 max-w-3xl mx-auto mt-1">
             Ensuring a safe and respectful environment for all students, staff, and faculty members
           </p>
-        </div>
-
-        {/* Committee Information Card */}
-        <div className="bg-gradient-to-r from-green-50 to-orange-50 rounded-xl p-6 mb-8 border border-green-100">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">🛡️</span> About VISHAKHA Committee
-              </h3>
-              <p className="text-gray-700 text-sm">
-                The VISHAKHA Committee is dedicated to addressing and preventing sexual harassment 
-                in the institution, providing a safe and confidential platform for complaints, 
-                and ensuring a respectful environment for all.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">🔒</span> Confidentiality Assurance
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-gray-600">All complaints handled with strict confidentiality</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-gray-600">Zero tolerance policy</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-gray-600">Fair and impartial investigation</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

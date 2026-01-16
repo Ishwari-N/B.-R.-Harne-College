@@ -55,10 +55,7 @@ export default function GrievanceRedressalPage() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
-              <span className="text-2xl">🛡️</span>
-            </div>
+          <div className="inline-flex items-center gap-3 mb-4 pt-3">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
               Grievance Redressal Committee
             </h1>
@@ -66,40 +63,6 @@ export default function GrievanceRedressalPage() {
           <p className="text-gray-600 max-w-3xl mx-auto">
             Ensuring fair and prompt resolution of concerns for students, staff, and faculty members
           </p>
-        </div>
-
-        {/* Committee Information Card */}
-        <div className="bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-xl p-6 mb-8 border border-[#F39C12]/20">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">📋</span> About GRC
-              </h3>
-              <p className="text-gray-700 text-sm">
-                The Grievance Redressal Committee addresses concerns from students, faculty, and staff 
-                in a fair, transparent manner. Our goal is to maintain a harmonious academic environment.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span className="text-xl">⏰</span> Working Hours
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Days:</span>
-                  <span className="font-medium">Monday to Friday</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Time:</span>
-                  <span className="font-medium">10:00 AM - 5:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Response Time:</span>
-                  <span className="font-medium text-[#0bc22d]">Within 24 hours</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Committee Members Table */}
@@ -274,21 +237,6 @@ export default function GrievanceRedressalPage() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Footer Note */}
-        <div className="bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-xl p-6 border border-[#F39C12]/20">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#0bc22d] to-[#F39C12] flex items-center justify-center">
-              <span className="text-white text-xl">💡</span>
-            </div>
-            <h3 className="font-bold text-gray-800">Important Note</h3>
-          </div>
-          <p className="text-gray-700">
-            All grievances are handled with strict confidentiality. Please provide complete details 
-            including your name, contact information, and nature of concern for faster resolution. 
-            The committee aims to respond to all grievances within 24 hours of submission.
-          </p>
         </div>
       </div>
     </main>

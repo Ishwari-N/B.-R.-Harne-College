@@ -97,11 +97,8 @@ export default function MUHSMandate20242025() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header Section */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 ">
           <div className="inline-flex items-center justify-center gap-3 mb-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
-              <span className="text-2xl">📋</span>
-            </div>
             <h1 className="text-3xl md:text-3xl font-bold text-gray-800">
               MUHS Mandate 2024-2025
             </h1>
@@ -116,7 +113,6 @@ export default function MUHSMandate20242025() {
           {/* Table Header */}
           <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white p-4">
             <h2 className="text-xl font-bold flex items-center gap-2">
-              <span className="text-2xl">📄</span>
               Annexures & Documents
             </h2>
             <p className="text-white/80 text-sm mt-1">Click "View" to access the respective documents</p>
