@@ -113,31 +113,15 @@ export default function GrievanceRedressalPage() {
                       index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
                     }`}
                   >
-                    <td className="py-4 px-6 border-b border-gray-100">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                          member.designation === 'Chairman' 
-                            ? 'bg-gradient-to-r from-[#F39C12] to-amber-500' 
-                            : member.designation.includes('Student')
-                            ? 'bg-gradient-to-r from-emerald-600 to-teal-500'
-                            : 'bg-gradient-to-r from-[#0bc22d] to-emerald-500'
-                        }`}>
-                          {index + 1}
-                        </div>
+                   <td className="py-4 px-6 border-b border-gray-100">
+                    <div className="flex items-center gap-3">
+                      <div className="text-lg font-semibold text-gray-900">
+                        {index + 1}.
                       </div>
-                    </td>
+                    </div>
+                  </td>
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                          member.designation === 'Chairman' 
-                            ? 'bg-amber-100 text-amber-600' 
-                            : member.designation.includes('Student')
-                            ? 'bg-emerald-100 text-emerald-600'
-                            : 'bg-green-100 text-green-600'
-                        }`}>
-                          {member.designation === 'Chairman' ? '👨‍🏫' : 
-                           member.designation.includes('Student') ? '👩‍🎓' : '👨‍⚕️'}
-                        </div>
                         <div>
                           <div className="font-medium text-gray-800">{member.name}</div>
                         </div>
@@ -156,9 +140,6 @@ export default function GrievanceRedressalPage() {
                     </td>
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
-                          <span className="text-green-600">📞</span>
-                        </div>
                         <a 
                           href={`tel:${member.contactNo}`}
                           className="font-medium text-gray-800 hover:text-[#0bc22d] transition-colors"

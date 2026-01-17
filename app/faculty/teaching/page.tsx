@@ -317,19 +317,18 @@ export default function TeachingStaffPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-2">
         {/* Hero Section */}
-        <div className="relative rounded-3xl overflow-hidden mb-4">          
+        <div className="relative rounded-3xl overflow-hidden mb-5">          
           
-          <div className="relative px-6 py-5 md:py-5 text-center">
-            <div className="inline-flex items-center justify-center gap-2 mb-3 animate-fade-in">
+          <div className="relative px-6 md:py-10 text-center">
+            <div className="inline-flex items-center justify-center gap-2 mb-1 animate-fade-in">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-black mb-2">
+                <h1 className="text-4xl md:text-5xl font-bold text-black mb-1">
                   Teaching Staff
                 </h1>
-                <div className="text-xl text-gray-800">Expert Faculty • Mentors • Researchers</div>
               </div>
             </div>
             
-            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-[15px] text-gray-700 max-w-xl mx-auto leading-relaxed">
               Meet our distinguished team of physiotherapy educators and researchers dedicated to shaping the future of healthcare professionals
             </p>
           </div>

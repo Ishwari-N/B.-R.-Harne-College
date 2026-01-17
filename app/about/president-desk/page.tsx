@@ -9,7 +9,7 @@ export default function PresidentDeskPage() {
             President&apos;s Desk
           </h1>
           <p className="text-green-700 text-lg md:text-xl">
-            A Vision for Excellence in Education
+            Courage and simplicity is the power to win
           </p>
         </div>
       </header>
@@ -85,11 +85,9 @@ export default function PresidentDeskPage() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-100">
               <div className="flex items-center gap-3 mb-8">
-                <div className="p-3 bg-gradient-to-r from-green-50 to-green-100 rounded-xl border border-green-200">
-                  <div className="w-8 h-8 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">P</span>
-                  </div>
-                </div>
+              <div className="flex items-center justify-center">
+                <div className="w-1 h-6 bg-gradient-to-r from-[#0bc22d] to-[#F39C12] rounded-full"></div>
+              </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
                   From President&apos;s Desk
                 </h2>
@@ -114,62 +112,7 @@ export default function PresidentDeskPage() {
                 <p className="text-gray-700 leading-relaxed">
                   The institute has a very special place in my heart. Since 2011, <span className="text-green-700 font-semibold">BRHCET</span> has developed excellent infra-structural facilities with well-equipped laboratories and an enriched library, which will be updated regularly. I believe that in nearby future the institute will produce competent technocrats and managers who will make a significant contribution to the corporate world and industries all over the world.
                 </p>
-
-                {/* Vision Box */}
-                <div className="bg-gradient-to-r from-green-50/30 to-orange-50/30 p-6 rounded-2xl my-8 border border-green-200">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-xl">V</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Our Vision for the Future
-                      </h3>
-                      <p className="text-gray-700">
-                        We envision creating an educational ecosystem that not only imparts knowledge but also fosters innovation, ethical leadership, and global competitiveness among our students.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-
-            {/* Milestones */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-              {[
-                {
-                  year: "2007",
-                  title: "Foundation Established",
-                  desc: "Journey began with a vision",
-                  color: "from-green-50 to-green-100"
-                },
-                {
-                  year: "2011",
-                  title: "BRHCET Started",
-                  desc: "Engineering college inauguration",
-                  color: "from-orange-50 to-orange-100"
-                },
-                {
-                  year: "Present",
-                  title: "Excellence in Education",
-                  desc: "Producing global technocrats",
-                  color: "from-green-50 to-orange-50"
-                }
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`bg-gradient-to-r ${item.color} p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-2xl transition-all`}
-                >
-                  <div className={`text-3xl font-bold ${index === 0 ? 'text-green-700' : index === 1 ? 'text-orange-700' : 'text-green-600'}`}>
-                    {item.year}
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-800 mt-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
-                  <div className={`h-1 w-20 rounded-full mt-3 ${index === 0 ? 'bg-green-500' : index === 1 ? 'bg-orange-500' : 'bg-gradient-to-r from-green-500 to-orange-500'}`}></div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

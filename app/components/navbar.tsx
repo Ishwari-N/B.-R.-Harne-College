@@ -9,11 +9,10 @@ export default function Navbar() {
 
   const dropdownItems = {
     about: [
-      { name: 'Vision Mission', path: '/about/vision-mission' },
+      { name: 'About College', path: '/about/college' },
       { name: 'President Desk', path: '/about/president-desk' },
       { name: 'Treasurer Desk', path: '/about/treasurer-desk' },
       { name: 'Principal Desk', path: '/about/principal-desk' },
-      { name: 'About College', path: '/about/college' },
     ],
     course: [
       { name: 'Under Graduate Courses', path: ' ' },

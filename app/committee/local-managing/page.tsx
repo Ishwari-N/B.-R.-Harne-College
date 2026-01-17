@@ -7,40 +7,40 @@ export default function LocalManagingCommitteePage() {
     {
       id: 1,
       position: "President of Trust",
-      members: ["1. Mr. Mangesh B. Harne"]
+      members: ["Mr. Mangesh B. Harne"]
     },
     {
       id: 2,
       position: "Secretary of Trust",
-      members: ["1. Mr. Rushikesh M. Harne"]
+      members: ["Mr. Rushikesh M. Harne"]
     },
     {
       id: 3,
       position: "Three Local Member",
       members: [
-        "1. Mr. Chadrakant Surve",
-        "2. Mr. Shailesh Sapkal", 
-        "3. Mr. Nilesh Hindurov"
+        "Mr. Chadrakant Surve",
+        "Mr. Shailesh Sapkal", 
+        "Mr. Nilesh Hindurov"
       ]
     },
     {
       id: 4,
       position: "Three Teaching Staff Member",
       members: [
-        "1. Dr. Parag Kulkarni",
-        "2. Dr. Mayuri Ghumattkar",
-        "3. Dr. Anukshaya Moolya"
+        "Dr. Parag Kulkarni",
+        "Dr. Mayuri Ghumattkar",
+        "Dr. Anukshaya Moolya"
       ]
     },
     {
       id: 5,
       position: "One Non-Teaching Staff",
-      members: ["1. Mr. Yogesh F. Jain"]
+      members: ["Mr. Yogesh F. Jain"]
     },
     {
       id: 6,
       position: "Principal as Member Secretary",
-      members: ["1. Dr. Jay Gupta"]
+      members: ["Dr. Jay Gupta"]
     }
   ]);
 
@@ -77,7 +77,6 @@ export default function LocalManagingCommitteePage() {
                 <tr>
                   <th className="py-4 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
                     <div className="flex items-center gap-2">
-                      <span>🔢</span>
                       <span>Sr. No</span>
                     </div>
                   </th>
@@ -108,46 +107,15 @@ export default function LocalManagingCommitteePage() {
                         : 'auto' 
                     }}
                   >
-                    <td className="py-4 px-6 border-b border-gray-100 align-top">
-                      <div className="flex items-start gap-3">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                          committee.position.includes('President') 
-                            ? 'bg-gradient-to-r from-green-800 to-green-700' 
-                            : committee.position.includes('Secretary')
-                            ? 'bg-gradient-to-r from-orange-600 to-orange-700'
-                            : committee.position.includes('Teaching')
-                            ? 'bg-gradient-to-r from-green-500 to-emerald-800'
-                            : committee.position.includes('Non-Teaching')
-                            ? 'bg-gradient-to-r from-orange-500 to-amber-700'
-                            : committee.position.includes('Local Member')
-                            ? 'bg-gradient-to-r from-green-400 to-teal-800'
-                            : 'bg-gradient-to-r from-orange-400 to-yellow-800'
-                        }`}>
-                          {index + 1}
+                    <td className="py-4 px-6 border-b border-gray-100">
+                      <div className="flex items-center gap-3">
+                        <div className="text-lg font-semibold text-gray-700">
+                          {index + 1}.
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6 border-b border-gray-100 align-top">
                       <div className="flex items-start gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                          committee.position.includes('President') 
-                            ? 'bg-green-100 text-green-700 border border-green-200' 
-                            : committee.position.includes('Secretary')
-                            ? 'bg-orange-100 text-orange-700 border border-orange-200'
-                            : committee.position.includes('Teaching')
-                            ? 'bg-emerald-100 text-emerald-700 border border-emerald-200'
-                            : committee.position.includes('Non-Teaching')
-                            ? 'bg-amber-100 text-amber-700 border border-amber-200'
-                            : committee.position.includes('Local Member')
-                            ? 'bg-teal-100 text-teal-700 border border-teal-200'
-                            : 'bg-yellow-100 text-yellow-700 border border-yellow-200'
-                        }`}>
-                          {committee.position.includes('President') ? '👑' : 
-                           committee.position.includes('Secretary') ? '📝' :
-                           committee.position.includes('Teaching') ? '👨‍🏫' :
-                           committee.position.includes('Non-Teaching') ? '👨‍💼' :
-                           committee.position.includes('Local Member') ? '🏢' : '🎓'}
-                        </div>
                         <div>
                           <div className="font-medium text-gray-800">{committee.position}</div>
                         </div>
@@ -158,21 +126,21 @@ export default function LocalManagingCommitteePage() {
                         {committee.members.map((member, memberIndex) => (
                           <div 
                             key={memberIndex} 
-                            className="flex items-center gap-3"
+                            className="flex items-start gap-2"
                           >
-                            <span className="text-sm text-gray-600">•</span>
-                            <span className={`inline-flex items-center px-3 py-1.5 rounded-lg text-sm ${
+                            <span className="text-sm text-gray-600 mt-1">•</span>
+                            <span className={`text-sm ${
                               committee.position.includes('President') 
-                                ? 'bg-green-50 text-green-800 border border-green-100' 
+                                ? 'text-green-800' 
                                 : committee.position.includes('Secretary')
-                                ? 'bg-orange-50 text-orange-800 border border-orange-100'
+                                ? 'text-orange-800'
                                 : committee.position.includes('Teaching')
-                                ? 'bg-emerald-50 text-emerald-950 border border-emerald-100'
+                                ? 'text-emerald-950'
                                 : committee.position.includes('Non-Teaching')
-                                ? 'bg-amber-50 text-red-800 border border-amber-100'
+                                ? 'text-red-800'
                                 : committee.position.includes('Local Member')
-                                ? 'bg-teal-50 text-violet-950 border border-teal-100'
-                                : 'bg-yellow-50 text-yellow-800 border border-yellow-100'
+                                ? 'text-violet-950'
+                                : 'text-yellow-800'
                             }`}>
                               {member}
                             </span>
@@ -241,24 +209,24 @@ export default function LocalManagingCommitteePage() {
                     {committee.members.map((member, memberIndex) => (
                       <div 
                         key={memberIndex}
-                        className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                        className="flex items-start gap-2 p-2"
                       >
-                        <span className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm ${
+                        <span className="text-sm text-gray-600 mt-1">•</span>
+                        <span className={`text-sm ${
                           committee.position.includes('President') 
-                            ? 'bg-green-600' 
+                            ? 'text-green-800' 
                             : committee.position.includes('Secretary')
-                            ? 'bg-orange-600'
+                            ? 'text-orange-800'
                             : committee.position.includes('Teaching')
-                            ? 'bg-emerald-600'
+                            ? 'text-emerald-950'
                             : committee.position.includes('Non-Teaching')
-                            ? 'bg-amber-600'
+                            ? 'text-red-800'
                             : committee.position.includes('Local Member')
-                            ? 'bg-teal-600'
-                            : 'bg-yellow-600'
+                            ? 'text-violet-950'
+                            : 'text-yellow-800'
                         }`}>
-                          {memberIndex + 1}
+                          {member}
                         </span>
-                        <span className="font-medium text-gray-800">{member.replace(/^\d+\.\s*/, '')}</span>
                       </div>
                     ))}
                   </div>

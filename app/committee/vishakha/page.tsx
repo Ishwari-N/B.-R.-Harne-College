@@ -107,51 +107,31 @@ export default function VishakhaCommitteePage() {
                   >
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                          member.designation === 'President' 
-                            ? 'bg-gradient-to-r from-green-600 to-green-700' 
-                            : member.designation === 'Vice President'
-                            ? 'bg-gradient-to-r from-orange-600 to-orange-700'
-                            : member.designation.includes('Student')
-                            ? 'bg-gradient-to-r from-green-500 to-emerald-600'
-                            : 'bg-gradient-to-r from-orange-500 to-green-600'
-                        }`}>
-                          {index + 1}
+                        <div className="text-lg font-semibold text-gray-900">
+                          {index + 1}.
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6 border-b border-gray-100">
                       <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                          member.designation === 'President' 
-                            ? 'bg-green-100 text-green-700 border border-green-200' 
-                            : member.designation === 'Vice President'
-                            ? 'bg-orange-100 text-orange-700 border border-orange-200'
-                            : member.designation.includes('Student')
-                            ? 'bg-emerald-100 text-emerald-700 border border-emerald-200'
-                            : 'bg-amber-100 text-gray-700 border border-amber-200'
-                        }`}>
-                          {member.designation === 'President' || member.designation === 'Vice President' ? '👨‍🏫' : 
-                           member.designation.includes('Student') ? '👩‍🎓' : '👨‍⚕️'}
-                        </div>
                         <div>
                           <div className="font-medium text-gray-800">{member.name}</div>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6 border-b border-gray-100">
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                        member.designation === 'President' 
-                          ? 'bg-green-100 text-green-700 border border-green-200' 
-                          : member.designation === 'Vice President'
-                          ? 'bg-orange-100 text-orange-700 border border-orange-200'
-                          : member.designation.includes('Student')
-                          ? 'bg-emerald-100 text-emerald-700 border border-emerald-200'
-                          : 'bg-amber-100 text-gray-700 border border-amber-300'
-                      }`}>
-                        {member.designation}
-                      </span>
-                    </td>
+  <span className={`text-xs font-medium ${
+    member.designation === 'President' 
+      ? 'text-green-700' 
+      : member.designation === 'Vice President'
+      ? 'text-orange-700'
+      : member.designation.includes('Student')
+      ? 'text-emerald-700'
+      : 'text-gray-700'
+  }`}>
+    {member.designation}
+  </span>
+</td>
                   </tr>
                 ))}
               </tbody>

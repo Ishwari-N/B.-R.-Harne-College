@@ -102,14 +102,13 @@ export default function TreasurerDeskPage() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-gray-100 hover:shadow-2xl transition-all duration-500">
               <div className="flex items-center gap-4 mb-10">
-                <div className="p-4 bg-gradient-to-br from-green-600 to-green-500 rounded-2xl shadow-lg">
-                  <span className="text-white text-2xl font-bold">T</span>
-                </div>
+                <div className="flex items-center justify-center">
+                <div className="w-1 h-6 bg-gradient-to-r from-[#0bc22d] to-[#F39C12] rounded-full"></div>
+              </div>
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                     From Treasurer&apos;s Desk
                   </h2>
-                  <p className="text-gray-600 mt-2">A Message of Vision & Commitment</p>
                 </div>
               </div>
 
@@ -120,7 +119,6 @@ export default function TreasurerDeskPage() {
                 </p>
 
                 <div className="relative">
-                  <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 to-green-600 rounded-full"></div>
                   <div className="bg-gradient-to-r from-green-50/50 to-transparent p-6 pl-10 rounded-r-2xl border-l-4 border-green-500 hover:from-green-50 transition-all duration-300">
                     <p className="text-gray-700 italic text-lg leading-relaxed">
                       The mission of establishing the educational campus is to impart quality education by including innovative courses & creating a learner-friendly environment.
@@ -135,19 +133,6 @@ export default function TreasurerDeskPage() {
                     <p className="text-gray-900 leading-relaxed">
                       I extend a hearty & warm welcome to you at <span className="font-semibold">B. R. Harne College of Pharmacy</span>, which will definitely shape your mind & character. With you All the Best for your future prospects.
                     </p>
-
-                {/* Signature */}
-                <div className="mt-5 pt-5 border-t border-gray-200">
-                  <div className="flex flex-col items-end space-y-4">
-                    <div className="text-right">
-                      <p className="text-gray-600 mb-2">With best regards,</p>
-                      <div className="text-2xl font-bold text-gray-900 font-serif">
-                        Mr. Rushikesh M. Harne
-                      </div>
-                      <p className="text-green-600 font-semibold mt-1">Treasurer</p>
-                    </div>
-                  </div>
-                </div>
 
                 
             {/* Quick Stats */}

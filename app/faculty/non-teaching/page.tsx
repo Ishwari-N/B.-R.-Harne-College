@@ -218,14 +218,13 @@ export default function NonTeachingStaffPage() {
       <main className="max-w-7xl mx-auto px-4 py-4">
         {/* Hero Section */}
         <div className="relative rounded-3xl overflow-hidden mb-3 p-3">          
-          <div className="relative px-6 py-3 text-center">
+          <div className="relative px-6 py-5 text-center">
             <div className="inline-flex items-center justify-center gap-4 mb-4 animate-fade-in">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-black mb-2">
                   Non-Teaching Staff
-                </h1>
-                <div className="text-xl text-gray-800">Administrative • Support • Operational</div>            
-                <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed mt-3">
+                </h1>           
+                <p className="text-lg md:text-[15px] text-gray-700 max-w-xl mx-auto leading-relaxed mt-3">
                   Meet our dedicated non-teaching staff who work tirelessly behind the scenes to ensure the smooth operation of our college
                 </p>
               </div>

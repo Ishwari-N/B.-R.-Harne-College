@@ -77,14 +77,6 @@ export default function PrincipalDeskPage() {
           </div>
         </div>
       </div>
-
-      {/* Quote */}
-      <div className="mt-6 bg-gradient-to-r from-green-50 to-gray-50 rounded-xl p-4 border border-green-100">
-        <p className="text-gray-700 italic text-sm text-center">
-          &quot;Excellence is the gradual result of always striving to do better.&quot;
-        </p>
-        <p className="text-green-600 text-xs font-medium mt-2 text-center">Vision: Redefining Physiotherapy Education</p>
-      </div>
     </div>
   </div>
 </div>
@@ -93,9 +85,9 @@ export default function PrincipalDeskPage() {
             {/* Welcome Message */}
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-gray-100 mb-8 group hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-600 to-green-500 rounded-xl flex items-center justify-center">
-                  <span className="text-2xl text-white">💬</span>
-                </div>
+                <div className="flex items-center justify-center">
+                <div className="w-1 h-6 bg-gradient-to-r from-[#0bc22d] to-[#F39C12] rounded-full"></div>
+              </div>
                 <h2 className="text-3xl font-bold text-gray-900">Principal&apos;s Message</h2>
               </div>
               
@@ -114,24 +106,6 @@ export default function PrincipalDeskPage() {
 
                 <p className="leading-relaxed">
                   The last two decades of the last century paved the path for an appropriate increase in the number of Physiotherapy professionals in the country. There was an apprehension and speculation about the progress of the profession a decade back. The realities were far from those apprehensions; the profession has grown brighter over the years, and truly the old myths are making room for new success.
-                </p>
-              </div>
-            </div>
-
-            {/* Message to Students */}
-            <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group mb-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl text-white">🎓</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-xl">Message to Students</h3>
-              </div>
-              <div className="space-y-4 text-gray-700">
-                <p className="leading-relaxed">
-                  To be successful in life, have ambitions and define your goals clearly. Discipline and hard work is the key to success.
-                </p>
-                <p className="leading-relaxed">
-                  Be regular in your classes and focus on your goals. Your concerted efforts with the able guidance of your teachers would definitely provide you a blissful and successful life.
                 </p>
               </div>
             </div>

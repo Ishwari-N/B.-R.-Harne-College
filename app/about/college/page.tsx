@@ -61,16 +61,9 @@ export default function AboutCollegePage() {
         
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="text-center max-w-3xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex mb-2 px-5 py-2 bg-white/35 backdrop-blur-sm rounded-full border border-white/10">
-              <span className="text-green-900 font-semibold flex items-center gap-2">
-                <span className="text-xl">🎓</span>
-                Recognized by Govt. of Maharashtra
-              </span>
-            </div>
             
             {/* Title */}
-            <h1 className="text-5xl md:text-7xl font-bold text-black mb-5 animate-fade-in">
+            <h1 className="text-5xl md:text-5xl font-bold text-black mb-5 animate-fade-in">
               About Our College
             </h1>
             
@@ -144,24 +137,23 @@ export default function AboutCollegePage() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900">
-              Welcome to <span className="text-green-700">B. R. Harne College</span>
+            <h2 className="text-3xl font-bold text-gray-900">
+              Welcome to <span className="text-green-700">B. R. Harne College of Physiotherapy</span>
             </h2>
             
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-900 leading-relaxed">
               <p>
-                B. R. Harne College of Physiotherapy established in the year 2021 under the aegis of 
-                <span className="font-semibold text-green-700"> Jai Shree Siddhivinayak Foundation</span> is affiliated to 
-                <span className="font-semibold text-green-700"> Maharashtra University of Health Sciences, Nashik</span>.
+                Established in the year 2021 under the aegis of Jai Shree Siddhivinayak Foundation is affiliated to Maharashtra 
+                University of Health Sciences, Nashik
               </p>
               
               <p>
-                Our undergraduate program for <span className="font-semibold">Bachelors of Physiotherapy (BPTh.)</span> 
+                Our undergraduate program for Bachelors of Physiotherapy (BPTh.)
                 was also started in the Academic Year 2021-22.
               </p>
               
               <p>
-                Our college imparts in our undergraduate students a <span className="font-semibold text-green-600">Holistic, Comprehensive and scientific approach</span> 
+                Our college imparts in our undergraduate students a Holistic, Comprehensive and scientific approach 
                 towards patients along with offering Physiotherapy and Rehabilitation services.
               </p>
             </div>
@@ -172,7 +164,7 @@ export default function AboutCollegePage() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Commitment to Excellence</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-700 max-w-2xl mx-auto">
               We are striving hard to create an inductive society where skills and talents 
               of special individuals are empowered and recognized.
             </p>
@@ -207,89 +199,53 @@ export default function AboutCollegePage() {
           </div>
         </div>
 
-        {/* Growth Timeline */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 md:p-12 mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Our Journey</h2>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-green-400 to-emerald-400 hidden md:block"></div>
-            
-            <div className="space-y-12 relative">
-              {milestones.map((milestone, index) => (
-                <div 
-                  key={index}
-                  className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-                >
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} mb-6 md:mb-0`}>
-                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <div className={`text-2xl font-bold mb-2 ${index === 0 ? 'text-green-700' : index === 1 ? 'text-orange-700' : 'text-green-600'}`}>
-                        {milestone.year}
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{milestone.event}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="hidden md:block w-12 h-12 rounded-full bg-white border-4 border-green-500 flex items-center justify-center z-10">
-                    <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-green-500' : index === 1 ? 'bg-orange-500' : 'bg-green-400'}`}></div>
-                  </div>
-                  
-                  <div className="md:w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        {/* Recognition & Affiliation */}
-        <div className="bg-gradient-to-r from-green-800 to-green-900 rounded-3xl p-8 md:p-12 text-white overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full translate-y-48 -translate-x-48"></div>
-          
-          <div className="relative z-10">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-4">Recognition & Affiliation</h2>
-              <p className="text-green-200 max-w-2xl mx-auto">
-                Officially recognized and affiliated with esteemed educational bodies
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-3xl">🏛️</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">Government Recognition</h3>
-                    <p className="text-green-200">Official Recognition</p>
-                  </div>
-                </div>
-                <p className="text-green-100">
-                  Recognized by the Government of Maharashtra under the Education Department
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-3xl">📜</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">University Affiliation</h3>
-                    <p className="text-green-200">MUHS Nashik</p>
-                  </div>
-                </div>
-                <p className="text-green-100">
-                  Affiliated to Maharashtra University of Health Sciences (MUHS), Nashik - 
-                  The premier health university in Maharashtra
-                </p>
-              </div>
-            </div>
+     {/* Recognition & Affiliation */}
+<div className="bg-gray-100 rounded-3xl p-8 md:p-12 text-black border border-gray-300 shadow-sm">
+  <div className="relative z-10">
+    <div className="text-center mb-10">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0F2A44] sm:mb-2">Recognition & Affiliation</h2>
+      <p className="text-gray-700 max-w-xl mx-auto">
+        Officially recognized and affiliated with esteemed educational bodies
+      </p>
+    </div>
+    
+    <div className="grid md:grid-cols-2 gap-6">
+      {/* Government Recognition */}
+      <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <span className="text-2xl text-blue-600">🏛️</span>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-gray-900">Government Recognition</h3>
+            <p className="text-blue-900 text-sm">Official Recognition</p>
           </div>
         </div>
+        <p className="text-gray-700 mb-4">
+          Recognized by the Government of Maharashtra under the Education Department
+        </p>
+      </div>
+      
+      {/* University Affiliation */}
+      <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <span className="text-2xl text-blue-600">📜</span>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-gray-900">University Affiliation</h3>
+            <p className="text-blue-900 text-sm">MUHS Nashik</p>
+          </div>
+        </div>
+        <p className="text-gray-700 mb-4">
+          Affiliated to Maharashtra University of Health Sciences (MUHS), Nashik - 
+          The premier health university in Maharashtra
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Student Life Preview */}
         <div className="mt-20">
