@@ -151,10 +151,12 @@ export default function MUHSMandate20252026() {
                     >
                       <td className="py-2 px-6 border-b border-gray-100">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
-                            <span className="text-sm font-bold text-gray-700">
-                              {index + 1}
-                            </span>
+                          <div className="flex items-start gap-3">
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <span className="text-sm font-bold text-gray-700">
+                                {index + 1}.
+                              </span>
+                            </div>
                           </div>
                           <div>
                             <div className="font-semibold text-gray-800">{item.annexure}</div>

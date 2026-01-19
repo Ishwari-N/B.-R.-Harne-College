@@ -264,7 +264,7 @@ function InstitutionDetailsSection() {
   {/* Instagram */}
   <a href="https://www.instagram.com/brharnecollegeofpharmacy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="group">
     <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center hover:opacity-90 transition-all duration-300">
-      <FaInstagram className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+      <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
     </div>
   </a>
 
@@ -278,7 +278,7 @@ function InstitutionDetailsSection() {
      {/* YouTube */}
       <a href="https://www.youtube.com/channel/UC1j0X3w9q4Q8V5Y6y2v7uJQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="group">
         <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-red-600 flex items-center justify-center hover:opacity-90 transition-all duration-300">
-          <FaYoutube className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+          <FaYoutube className="w-3 h-3 sm:w-5 sm:h-5 text-white" />
         </div>
       </a>
 

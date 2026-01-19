@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
 export default function GrievanceRedressalPage() {
   const [committeeMembers] = useState([
@@ -52,27 +51,27 @@ export default function GrievanceRedressalPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-green-50/30 via-white to-amber-50/20">
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
         {/* Page Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-4 pt-3">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 pt-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
               Grievance Redressal Committee
             </h1>
           </div>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base px-2">
             Ensuring fair and prompt resolution of concerns for students, staff, and faculty members
           </p>
         </div>
 
         {/* Committee Members Table */}
-        <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden mb-8">
-          <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white p-4">
-            <h2 className="text-xl font-bold flex items-center gap-3">
-              <span className="text-2xl">👥</span>
+        <div className="bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-100 overflow-hidden mb-6 sm:mb-8">
+          <div className="bg-gradient-to-r from-[#0bc22d] to-[#F39C12] text-white p-3 sm:p-4">
+            <h2 className="text-lg sm:text-xl font-bold flex items-center gap-2 sm:gap-3">
+              <span className="text-xl sm:text-2xl">👥</span>
               Committee Members
             </h2>
-            <p className="text-white/90 text-sm mt-1">Contact details of GRC members for grievance submission</p>
+            <p className="text-white/90 text-xs sm:text-sm mt-1">Contact details of GRC members for grievance submission</p>
           </div>
           
           {/* Table for Desktop */}
@@ -80,24 +79,24 @@ export default function GrievanceRedressalPage() {
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
+                  <th className="py-3 px-4 sm:px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
                     <div className="flex items-center gap-2">
                       <span>Sr. No</span>
                     </div>
                   </th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
+                  <th className="py-3 px-4 sm:px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
                     <div className="flex items-center gap-2">
                       <span>👤</span>
                       <span>Name of Staff Member</span>
                     </div>
                   </th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
+                  <th className="py-3 px-4 sm:px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
                     <div className="flex items-center gap-2">
                       <span>🎓</span>
                       <span>Designation</span>
                     </div>
                   </th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
+                  <th className="py-3 px-4 sm:px-6 text-left text-sm font-semibold text-gray-700 border-b border-gray-400">
                     <div className="flex items-center gap-2">
                       <span>📞</span>
                       <span>Contact No.</span>
@@ -113,22 +112,20 @@ export default function GrievanceRedressalPage() {
                       index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
                     }`}
                   >
-                   <td className="py-4 px-6 border-b border-gray-100">
-                    <div className="flex items-center gap-3">
-                      <div className="text-lg font-semibold text-gray-900">
+                    <td className="py-3 sm:py-4 px-4 sm:px-6 border-b border-gray-100">
+                      <div className="text-base sm:text-lg font-semibold text-gray-900">
                         {index + 1}.
                       </div>
-                    </div>
-                  </td>
-                    <td className="py-4 px-6 border-b border-gray-100">
-                      <div className="flex items-center gap-3">
+                    </td>
+                    <td className="py-3 sm:py-4 px-4 sm:px-6 border-b border-gray-100">
+                      <div className="flex items-center gap-2 sm:gap-3">
                         <div>
-                          <div className="font-medium text-gray-800">{member.name}</div>
+                          <div className="font-medium text-gray-800 text-sm sm:text-base">{member.name}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 px-6 border-b border-gray-100">
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                    <td className="py-3 sm:py-4 px-4 sm:px-6 border-b border-gray-100">
+                      <span className={`inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-xs font-medium ${
                         member.designation === 'Chairman' 
                           ? 'bg-amber-100 text-amber-700' 
                           : member.designation.includes('Student')
@@ -138,11 +135,11 @@ export default function GrievanceRedressalPage() {
                         {member.designation}
                       </span>
                     </td>
-                    <td className="py-4 px-6 border-b border-gray-100">
+                    <td className="py-3 sm:py-4 px-4 sm:px-6 border-b border-gray-100">
                       <div className="flex items-center gap-2">
                         <a 
                           href={`tel:${member.contactNo}`}
-                          className="font-medium text-gray-800 hover:text-[#0bc22d] transition-colors"
+                          className="font-medium text-gray-800 hover:text-[#0bc22d] transition-colors text-sm sm:text-base"
                         >
                           +91 {member.contactNo}
                         </a>
@@ -154,60 +151,65 @@ export default function GrievanceRedressalPage() {
             </table>
           </div>
 
-          {/* Cards for Mobile */}
-          <div className="md:hidden">
-            <div className="p-4 space-y-4">
-              {committeeMembers.map((member) => (
+          {/* Cards for Mobile & Tablet - UPDATED */}
+          <div className="block md:hidden">
+            <div className="p-3 sm:p-4 space-y-3 sm:space-y-4">
+              {committeeMembers.map((member, index) => (
                 <div 
                   key={member.id}
-                  className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+                  className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                        member.designation === 'Chairman' 
-                          ? 'bg-amber-100 text-amber-600' 
-                          : member.designation.includes('Student')
-                          ? 'bg-emerald-100 text-emerald-600'
-                          : 'bg-green-100 text-green-600'
-                      }`}>
-                        {member.designation === 'Chairman' ? '👨‍🏫' : 
-                         member.designation.includes('Student') ? '👩‍🎓' : '👨‍⚕️'}
-                      </div>
-                      <div>
-                        <div className="font-bold text-gray-800">{member.name}</div>
-                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium mt-1 ${
-                          member.designation === 'Chairman' 
-                            ? 'bg-amber-100 text-amber-700' 
-                            : member.designation.includes('Student')
-                            ? 'bg-emerald-100 text-emerald-700'
-                            : 'bg-green-100 text-green-700'
-                        }`}>
-                          {member.designation}
-                        </span>
-                      </div>
+                  <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    {/* Simple number on left side */}
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center">
+                      <span className="text-sm sm:text-base font-semibold text-gray-700">
+                        {index + 1}.
+                      </span>
                     </div>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                      member.designation === 'Chairman' 
-                        ? 'bg-gradient-to-r from-[#F39C12] to-amber-500' 
-                        : member.designation.includes('Student')
-                        ? 'bg-gradient-to-r from-emerald-600 to-teal-500'
-                        : 'bg-gradient-to-r from-[#0bc22d] to-emerald-500'
-                    }`}>
-                      {member.id}
+                    
+                    {/* Member details */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1 min-w-0">
+                          <div className="font-bold text-gray-800 text-sm sm:text-base truncate">{member.name}</div>
+                          <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium mt-1 ${
+                            member.designation === 'Chairman' 
+                              ? 'bg-amber-100 text-amber-700' 
+                              : member.designation.includes('Student')
+                              ? 'bg-emerald-100 text-emerald-700'
+                              : 'bg-green-100 text-green-700'
+                          }`}>
+                            {member.designation}
+                          </span>
+                        </div>
+                        
+                        {/* Profile icon moved here */}
+                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0 ml-2 ${
+                          member.designation === 'Chairman' 
+                            ? 'bg-amber-100 text-amber-600' 
+                            : member.designation.includes('Student')
+                            ? 'bg-emerald-100 text-emerald-600'
+                            : 'bg-green-100 text-green-600'
+                        }`}>
+                          <span className="text-sm sm:text-base">
+                            {member.designation === 'Chairman' ? '👨‍🏫' : 
+                             member.designation.includes('Student') ? '👩‍🎓' : '👨‍⚕️'}
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-lg">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center">
-                        <span className="text-green-600">📞</span>
+                  <div className="space-y-2 sm:space-y-3">
+                    <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-gradient-to-r from-[#0bc22d]/5 to-[#F39C12]/5 rounded-lg">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-[#0bc22d]/10 to-[#F39C12]/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-green-600 text-sm sm:text-base">📞</span>
                       </div>
-                      <div>
+                      <div className="flex-1 min-w-0">
                         <p className="text-xs text-gray-500">Contact Number</p>
                         <a 
                           href={`tel:${member.contactNo}`}
-                          className="font-medium text-gray-800 hover:text-[#0bc22d] transition-colors"
+                          className="font-medium text-gray-800 hover:text-[#0bc22d] transition-colors text-sm sm:text-base block truncate"
                         >
                           +91 {member.contactNo}
                         </a>
